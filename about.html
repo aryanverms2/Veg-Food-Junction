@@ -1,3 +1,4 @@
+```html
 <!DOCTYPE html>
 <html lang="en">
 
@@ -6,22 +7,26 @@
     <meta charset="UTF-8">
 
     <meta name="viewport"
-        content="width=device-width, initial-scale=1.0">
+          content="width=device-width, initial-scale=1.0">
 
     <title>About Us | Veg Food Junction</title>
 
-    <link rel="preconnect"
-        href="https://fonts.googleapis.com">
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
 
     <link rel="preconnect"
-        href="https://fonts.gstatic.com"
-        crossorigin>
+          href="https://fonts.gstatic.com"
+          crossorigin>
 
     <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display&family=Poppins:wght@300;400;500;600;700;800&display=swap"
-        rel="stylesheet">
+          rel="stylesheet">
 
 
     <style>
+
+        /* =====================================
+           RESET
+        ===================================== */
 
         * {
             margin: 0;
@@ -44,9 +49,9 @@
         }
 
 
-        /* ===============================
+        /* =====================================
            NAVBAR
-        =============================== */
+        ===================================== */
 
         .navbar {
 
@@ -60,34 +65,31 @@
 
             justify-content: space-between;
 
-            background: white;
+            background: #ffffff;
 
-            border-bottom: 1px solid #e7e4dc;
+            border-bottom: 1px solid #e5e2da;
 
             position: sticky;
 
             top: 0;
 
             z-index: 1000;
-
         }
 
 
         .logo {
 
-            font-size: 22px;
+            font-size: 21px;
 
             font-weight: 800;
 
             color: #23763a;
-
         }
 
 
         .logo span {
 
             color: #222;
-
         }
 
 
@@ -98,7 +100,6 @@
             align-items: center;
 
             gap: 25px;
-
         }
 
 
@@ -110,17 +111,14 @@
 
             font-weight: 500;
 
-            transition: 0.3s;
-
+            transition: .3s;
         }
 
 
         nav a:hover,
-
         nav a.active {
 
             color: #23763a;
-
         }
 
 
@@ -133,17 +131,16 @@
             padding: 10px 18px;
 
             border-radius: 30px;
-
         }
 
 
-        /* ===============================
-           HERO
-        =============================== */
+        /* =====================================
+           ABOUT HERO
+        ===================================== */
 
-        .hero {
+        .about-hero {
 
-            min-height: 500px;
+            min-height: 430px;
 
             display: flex;
 
@@ -153,18 +150,15 @@
 
             text-align: center;
 
-            padding: 80px 20px;
+            padding: 70px 20px;
 
             color: white;
 
             background:
 
                 linear-gradient(
-
-                    rgba(15,55,25,0.72),
-
-                    rgba(15,55,25,0.78)
-
+                    rgba(12,55,26,.78),
+                    rgba(12,55,26,.82)
                 ),
 
                 url("https://images.unsplash.com/photo-1515003197210-e0cd71810b5f?auto=format&fit=crop&w=1800&q=85");
@@ -172,104 +166,94 @@
             background-size: cover;
 
             background-position: center;
-
         }
 
 
-        .hero-content {
+        .about-hero-content {
 
             max-width: 800px;
-
         }
 
 
-        .hero small {
-
-            letter-spacing: 4px;
+        .about-hero small {
 
             color: #c4e8a5;
+
+            letter-spacing: 4px;
 
             font-size: 12px;
 
             font-weight: 600;
-
         }
 
 
-        .hero h1 {
+        .about-hero h1 {
 
             font-family: "DM Serif Display", serif;
 
-            font-size: clamp(55px, 8vw, 90px);
+            font-size: clamp(55px,8vw,85px);
 
             font-weight: 400;
 
-            margin: 10px 0 20px;
-
+            margin: 10px 0 15px;
         }
 
 
-        .hero h1 span {
+        .about-hero h1 span {
 
             color: #bde69c;
-
         }
 
 
-        .hero p {
+        .about-hero p {
 
-            color: #e0e9e0;
+            color: #e1ebe2;
+
+            font-size: 14px;
 
             line-height: 1.8;
-
-            font-size: 15px;
-
         }
 
 
-        /* ===============================
+        /* =====================================
            COMMON SECTION
-        =============================== */
+        ===================================== */
 
         .section {
 
             padding: 90px 6%;
-
         }
 
 
         .container {
 
-            max-width: 1200px;
+            max-width: 1150px;
 
             margin: auto;
-
         }
 
 
-        .section-title {
+        .title {
 
             text-align: center;
 
             margin-bottom: 50px;
-
         }
 
 
-        .section-title small {
+        .title small {
 
             color: #378149;
 
             letter-spacing: 3px;
 
-            font-size: 12px;
+            font-size: 11px;
 
             font-weight: 700;
-
         }
 
 
-        .section-title h2 {
+        .title h2 {
 
             font-family: "DM Serif Display", serif;
 
@@ -277,38 +261,35 @@
 
             font-weight: 400;
 
-            margin: 8px 0 10px;
-
+            margin: 8px 0;
         }
 
 
-        .section-title p {
+        .title p {
 
             color: #777;
 
-            font-size: 14px;
-
+            font-size: 13px;
         }
 
 
-        /* ===============================
-           ABOUT STORY
-        =============================== */
+        /* =====================================
+           OUR STORY
+        ===================================== */
 
-        .about-grid {
+        .story {
 
             display: grid;
 
             grid-template-columns: 1fr 1fr;
 
-            gap: 60px;
+            gap: 65px;
 
             align-items: center;
-
         }
 
 
-        .about-image {
+        .story-image {
 
             height: 500px;
 
@@ -323,39 +304,37 @@
             background-position: center;
 
             box-shadow:
-
-                0 20px 50px rgba(0,0,0,0.15);
-
+                0 20px 50px rgba(0,0,0,.15);
         }
 
 
-        .about-content small {
+        .story-content small {
 
             color: #378149;
 
-            font-size: 12px;
-
             letter-spacing: 3px;
 
-            font-weight: 700;
+            font-size: 11px;
 
+            font-weight: 700;
         }
 
 
-        .about-content h2 {
+        .story-content h2 {
 
             font-family: "DM Serif Display", serif;
 
-            font-size: 45px;
+            font-size: 46px;
 
             font-weight: 400;
 
-            margin: 10px 0 20px;
+            line-height: 1.1;
 
+            margin: 10px 0 20px;
         }
 
 
-        .about-content p {
+        .story-content p {
 
             color: #666;
 
@@ -364,19 +343,18 @@
             line-height: 1.9;
 
             margin-bottom: 15px;
-
         }
 
 
-        .quote {
+        .story-quote {
 
             margin-top: 25px;
 
-            padding: 20px;
+            padding: 18px 20px;
 
             border-left: 4px solid #378149;
 
-            background: #eef5ea;
+            background: #edf5e9;
 
             color: #315c38;
 
@@ -384,40 +362,44 @@
 
             font-style: italic;
 
+            font-size: 13px;
         }
 
 
-        /* ===============================
+        /* =====================================
            VALUES
-        =============================== */
+        ===================================== */
+
+        .values-section {
+
+            background: #ffffff;
+        }
+
 
         .values {
 
             display: grid;
 
             grid-template-columns:
-
-                repeat(4, 1fr);
+                repeat(4,1fr);
 
             gap: 20px;
-
         }
 
 
         .value-card {
 
-            background: white;
-
-            padding: 35px 25px;
+            padding: 35px 22px;
 
             text-align: center;
 
+            background: #f9f9f7;
+
+            border: 1px solid #e7e5df;
+
             border-radius: 18px;
 
-            border: 1px solid #e7e6df;
-
-            transition: 0.35s;
-
+            transition: .3s;
         }
 
 
@@ -426,17 +408,17 @@
             transform: translateY(-8px);
 
             box-shadow:
-
-                0 15px 35px rgba(0,0,0,0.08);
-
+                0 15px 35px rgba(0,0,0,.08);
         }
 
 
-        .value-icon {
+        .icon {
 
             width: 65px;
 
             height: 65px;
+
+            margin: auto auto 18px;
 
             display: flex;
 
@@ -444,23 +426,19 @@
 
             justify-content: center;
 
-            margin: auto auto 18px;
-
             border-radius: 50%;
 
             background: #edf6e9;
 
-            font-size: 30px;
-
+            font-size: 28px;
         }
 
 
         .value-card h3 {
 
-            font-size: 17px;
+            font-size: 16px;
 
             margin-bottom: 8px;
-
         }
 
 
@@ -471,110 +449,12 @@
             font-size: 12px;
 
             line-height: 1.7;
-
         }
 
 
-        /* ===============================
-           WHAT WE OFFER
-        =============================== */
-
-        .offer-section {
-
-            background: #17351f;
-
-            color: white;
-
-        }
-
-
-        .offer-section .section-title h2 {
-
-            color: white;
-
-        }
-
-
-        .offer-section .section-title p {
-
-            color: #bdcbbf;
-
-        }
-
-
-        .offers {
-
-            display: grid;
-
-            grid-template-columns:
-
-                repeat(3, 1fr);
-
-            gap: 20px;
-
-        }
-
-
-        .offer {
-
-            padding: 30px;
-
-            border: 1px solid rgba(255,255,255,0.12);
-
-            border-radius: 18px;
-
-            background:
-
-                rgba(255,255,255,0.04);
-
-            transition: 0.3s;
-
-        }
-
-
-        .offer:hover {
-
-            background:
-
-                rgba(255,255,255,0.08);
-
-            transform: translateY(-5px);
-
-        }
-
-
-        .offer-icon {
-
-            font-size: 35px;
-
-            margin-bottom: 15px;
-
-        }
-
-
-        .offer h3 {
-
-            margin-bottom: 8px;
-
-            font-size: 18px;
-
-        }
-
-
-        .offer p {
-
-            color: #bac7bc;
-
-            font-size: 12px;
-
-            line-height: 1.7;
-
-        }
-
-
-        /* ===============================
+        /* =====================================
            MISSION
-        =============================== */
+        ===================================== */
 
         .mission {
 
@@ -582,25 +462,34 @@
 
             grid-template-columns: 1fr 1fr;
 
-            gap: 50px;
+            gap: 60px;
 
             align-items: center;
+        }
 
+
+        .mission-content small {
+
+            color: #378149;
+
+            letter-spacing: 3px;
+
+            font-size: 11px;
+
+            font-weight: 700;
         }
 
 
         .mission-content h2 {
 
             font-family:
+                "DM Serif Display",serif;
 
-                "DM Serif Display", serif;
-
-            font-size: 48px;
+            font-size: 50px;
 
             font-weight: 400;
 
-            margin: 8px 0 18px;
-
+            margin: 10px 0 18px;
         }
 
 
@@ -611,7 +500,6 @@
             font-size: 14px;
 
             line-height: 1.9;
-
         }
 
 
@@ -622,7 +510,6 @@
             display: grid;
 
             gap: 12px;
-
         }
 
 
@@ -634,16 +521,18 @@
 
             border-radius: 10px;
 
-            font-size: 13px;
-
             color: #355b3d;
 
+            font-size: 13px;
+
+            box-shadow:
+                0 5px 15px rgba(0,0,0,.04);
         }
 
 
         .mission-image {
 
-            min-height: 400px;
+            min-height: 420px;
 
             border-radius: 25px;
 
@@ -654,122 +543,170 @@
             background-size: cover;
 
             background-position: center;
-
         }
 
 
-        /* ===============================
+        /* =====================================
            LOCATION
-        =============================== */
+        ===================================== */
 
         .location-section {
 
-            background: #eef4ea;
+            padding: 90px 6%;
 
+            background: #eef4ea;
         }
 
 
-        .location-card {
+        .location-container {
 
-            max-width: 900px;
+            max-width: 1100px;
 
             margin: auto;
+        }
+
+
+        .location-title {
+
+            text-align: center;
+
+            margin-bottom: 45px;
+        }
+
+
+        .location-title small {
+
+            color: #378149;
+
+            letter-spacing: 3px;
+
+            font-size: 11px;
+
+            font-weight: 700;
+        }
+
+
+        .location-title h2 {
+
+            font-family:
+                "DM Serif Display",serif;
+
+            font-size: 50px;
+
+            font-weight: 400;
+
+            margin: 8px 0;
+        }
+
+
+        .location-title p {
+
+            color: #777;
+
+            font-size: 13px;
+        }
+
+
+        /* LOCATION CARD */
+
+        .location-card {
 
             display: grid;
 
-            grid-template-columns: 1fr 1fr;
+            grid-template-columns:
+                1.15fr .85fr;
 
             background: white;
 
-            border-radius: 22px;
+            border-radius: 25px;
 
             overflow: hidden;
 
             box-shadow:
-
-                0 15px 40px rgba(0,0,0,0.08);
-
+                0 20px 50px rgba(0,0,0,.10);
         }
 
+
+        /* =====================================
+           GOOGLE MAP
+        ===================================== */
 
         .location-map {
 
-            min-height: 350px;
+            min-height: 430px;
 
-            background:
+            width: 100%;
 
-                linear-gradient(
-
-                    rgba(30,90,45,0.2),
-
-                    rgba(30,90,45,0.2)
-
-                ),
-
-                url("https://images.unsplash.com/photo-1524666041070-9d87656c25bb?auto=format&fit=crop&w=900&q=80");
-
-            background-size: cover;
-
-            background-position: center;
-
+            overflow: hidden;
         }
 
+
+        .location-map iframe {
+
+            width: 100%;
+
+            height: 100%;
+
+            min-height: 430px;
+
+            border: 0;
+
+            display: block;
+        }
+
+
+        /* =====================================
+           LOCATION INFO
+        ===================================== */
 
         .location-info {
 
             padding: 45px;
-
         }
 
 
-        .location-info small {
+        .location-info > small {
 
             color: #378149;
 
             letter-spacing: 2px;
 
-            font-weight: 700;
+            font-size: 11px;
 
+            font-weight: 700;
         }
 
 
         .location-info h2 {
 
             font-family:
-
-                "DM Serif Display", serif;
+                "DM Serif Display",serif;
 
             font-size: 38px;
 
             font-weight: 400;
 
-            margin: 8px 0 20px;
-
+            margin: 8px 0 25px;
         }
 
 
-        .info-item {
+        .location-item {
 
             display: flex;
 
             gap: 15px;
 
-            margin: 18px 0;
-
+            margin: 20px 0;
         }
 
 
-        .info-icon {
+        .location-icon {
 
-            width: 42px;
+            width: 43px;
 
-            height: 42px;
+            height: 43px;
 
-            min-width: 42px;
-
-            background: #edf6e9;
-
-            border-radius: 50%;
+            min-width: 43px;
 
             display: flex;
 
@@ -777,94 +714,270 @@
 
             justify-content: center;
 
+            border-radius: 50%;
+
+            background: #edf6e9;
+
+            font-size: 19px;
         }
 
 
-        .info-item strong {
+        .location-item strong {
 
             display: block;
 
             font-size: 13px;
 
-            margin-bottom: 3px;
-
+            margin-bottom: 4px;
         }
 
 
-        .info-item span,
-
-        .info-item a {
+        .location-item p,
+        .location-item a {
 
             color: #777;
 
             font-size: 12px;
 
-            line-height: 1.6;
+            line-height: 1.7;
+        }
 
+
+        .location-item a {
+
+            color: #23763a;
+
+            font-weight: 600;
+        }
+
+
+        /* =====================================
+           BUTTONS
+        ===================================== */
+
+        .location-buttons {
+
+            display: flex;
+
+            gap: 10px;
+
+            flex-wrap: wrap;
+
+            margin-top: 25px;
+        }
+
+
+        .direction-btn,
+        .call-btn {
+
+            display: inline-block;
+
+            padding: 12px 18px;
+
+            border-radius: 30px;
+
+            font-size: 11px;
+
+            font-weight: 600;
+
+            transition: .3s;
+        }
+
+
+        .direction-btn {
+
+            background: #23763a;
+
+            color: white;
         }
 
 
         .call-btn {
 
-            display: inline-block;
+            background: #edf6e9;
 
-            margin-top: 15px;
-
-            background: #23763a;
-
-            color: white;
-
-            padding: 12px 22px;
-
-            border-radius: 30px;
-
-            font-size: 12px;
-
-            font-weight: 600;
-
+            color: #23763a;
         }
 
 
-        /* ===============================
+        .direction-btn:hover,
+        .call-btn:hover {
+
+            transform: translateY(-3px);
+        }
+
+
+        /* =====================================
+           OWNER
+        ===================================== */
+
+        .owner-section {
+
+            background: #17351f;
+
+            padding: 100px 6%;
+        }
+
+
+        .owner-box {
+
+            max-width: 950px;
+
+            margin: auto;
+
+            display: grid;
+
+            grid-template-columns:
+                300px 1fr;
+
+            gap: 60px;
+
+            align-items: center;
+        }
+
+
+        .owner-photo {
+
+            width: 280px;
+
+            height: 280px;
+
+            margin: auto;
+
+            padding: 7px;
+
+            border-radius: 50%;
+
+            background:
+
+                linear-gradient(
+                    135deg,
+                    #c5e9a7,
+                    #378149
+                );
+
+            box-shadow:
+                0 20px 50px rgba(0,0,0,.3);
+        }
+
+
+        .owner-photo img {
+
+            width: 100%;
+
+            height: 100%;
+
+            object-fit: cover;
+
+            border-radius: 50%;
+
+            border: 5px solid white;
+
+            display: block;
+        }
+
+
+        .owner-content small {
+
+            color: #c5e9a7;
+
+            letter-spacing: 3px;
+
+            font-size: 11px;
+
+            font-weight: 700;
+        }
+
+
+        .owner-content h2 {
+
+            color: white;
+
+            font-family:
+                "DM Serif Display",serif;
+
+            font-size: 55px;
+
+            font-weight: 400;
+
+            margin: 8px 0 0;
+        }
+
+
+        .owner-content h3 {
+
+            color: #bde69c;
+
+            font-size: 14px;
+
+            margin-bottom: 20px;
+        }
+
+
+        .owner-content p {
+
+            color: #c7d2c9;
+
+            font-size: 14px;
+
+            line-height: 1.9;
+
+            max-width: 550px;
+        }
+
+
+        .owner-quote {
+
+            margin-top: 22px;
+
+            color: #dcebd9;
+
+            font-style: italic;
+
+            font-size: 13px;
+
+            border-left: 3px solid #bde69c;
+
+            padding-left: 15px;
+        }
+
+
+        /* =====================================
            CTA
-        =============================== */
+        ===================================== */
 
         .cta {
 
             text-align: center;
 
-            padding: 90px 20px;
+            padding: 80px 20px;
 
             background: #23763a;
 
             color: white;
-
         }
 
 
         .cta h2 {
 
             font-family:
+                "DM Serif Display",serif;
 
-                "DM Serif Display", serif;
-
-            font-size: 50px;
+            font-size: 48px;
 
             font-weight: 400;
 
-            margin-bottom: 20px;
-
+            margin-bottom: 15px;
         }
 
 
         .cta p {
 
-            color: #d5e8d5;
+            color: #d6e8d6;
 
-            font-size: 14px;
+            font-size: 13px;
 
             margin-bottom: 25px;
-
         }
 
 
@@ -876,20 +989,19 @@
 
             color: #17351f;
 
-            padding: 13px 27px;
+            padding: 13px 25px;
 
             border-radius: 30px;
 
             font-size: 13px;
 
             font-weight: 700;
-
         }
 
 
-        /* ===============================
+        /* =====================================
            FOOTER
-        =============================== */
+        ===================================== */
 
         footer {
 
@@ -899,8 +1011,7 @@
 
             text-align: center;
 
-            padding: 45px 20px;
-
+            padding: 40px 20px;
         }
 
 
@@ -910,12 +1021,13 @@
 
             font-size: 12px;
 
-            margin: 8px;
-
+            margin-top: 8px;
         }
 
 
         .footer-links {
+
+            margin: 20px 0;
 
             display: flex;
 
@@ -924,9 +1036,6 @@
             gap: 22px;
 
             flex-wrap: wrap;
-
-            margin: 20px 0;
-
         }
 
 
@@ -935,60 +1044,73 @@
             color: white;
 
             font-size: 12px;
-
         }
 
 
         .footer-links a:hover {
 
             color: #b9e493;
-
         }
 
 
-        /* ===============================
-           RESPONSIVE
-        =============================== */
+        /* =====================================
+           TABLET
+        ===================================== */
 
-        @media(max-width:900px) {
+        @media(max-width: 900px) {
 
-            .about-grid,
-
-            .mission {
+            .story,
+            .mission,
+            .owner-box {
 
                 grid-template-columns: 1fr;
-
             }
 
 
             .values {
 
                 grid-template-columns:
-
                     repeat(2,1fr);
-
             }
 
 
-            .offers {
+            .owner-box {
 
-                grid-template-columns:
+                text-align: center;
+            }
 
-                    repeat(2,1fr);
 
+            .owner-content p {
+
+                margin: auto;
             }
 
 
             .location-card {
 
                 grid-template-columns: 1fr;
+            }
 
+
+            .location-map {
+
+                min-height: 400px;
+            }
+
+
+            .location-map iframe {
+
+                min-height: 400px;
             }
 
         }
 
 
-        @media(max-width:600px) {
+        /* =====================================
+           MOBILE
+        ===================================== */
+
+        @media(max-width: 600px) {
 
             .navbar {
 
@@ -999,7 +1121,6 @@
                 flex-direction: column;
 
                 gap: 15px;
-
             }
 
 
@@ -1010,79 +1131,141 @@
                 justify-content: center;
 
                 gap: 12px;
-
             }
 
 
             nav a {
 
                 font-size: 10px;
-
             }
 
 
-            .hero {
+            .about-hero {
 
-                min-height: 450px;
-
+                min-height: 400px;
             }
 
 
-            .hero h1 {
+            .about-hero h1 {
 
                 font-size: 55px;
-
             }
 
 
             .section {
 
                 padding: 65px 5%;
-
             }
 
 
-            .section-title h2 {
+            .title h2 {
 
                 font-size: 38px;
-
             }
 
 
-            .about-image {
+            .story-image {
 
                 height: 350px;
-
             }
 
 
-            .values,
-
-            .offers {
+            .values {
 
                 grid-template-columns: 1fr;
-
             }
 
 
             .mission-content h2 {
 
-                font-size: 38px;
+                font-size: 40px;
+            }
 
+
+            /* MAP MOBILE */
+
+            .location-section {
+
+                padding: 65px 5%;
+            }
+
+
+            .location-title h2 {
+
+                font-size: 40px;
+            }
+
+
+            .location-card {
+
+                border-radius: 20px;
+            }
+
+
+            .location-map {
+
+                min-height: 320px;
+            }
+
+
+            .location-map iframe {
+
+                min-height: 320px;
             }
 
 
             .location-info {
 
                 padding: 30px 25px;
+            }
 
+
+            .location-buttons {
+
+                flex-direction: column;
+            }
+
+
+            .direction-btn,
+            .call-btn {
+
+                text-align: center;
+
+                width: 100%;
+            }
+
+
+            /* OWNER MOBILE */
+
+            .owner-section {
+
+                padding: 70px 5%;
+            }
+
+
+            .owner-box {
+
+                gap: 35px;
+            }
+
+
+            .owner-photo {
+
+                width: 220px;
+
+                height: 220px;
+            }
+
+
+            .owner-content h2 {
+
+                font-size: 43px;
             }
 
 
             .cta h2 {
 
                 font-size: 38px;
-
             }
 
         }
@@ -1095,165 +1278,163 @@
 <body>
 
 
-<!-- ===============================
-     NAVBAR
-=============================== -->
+    <!-- =====================================
+         NAVBAR
+    ===================================== -->
 
-<header class="navbar">
+    <header class="navbar">
 
-    <div class="logo">
+        <div class="logo">
 
-        🌿 Veg <span>Food Junction</span>
-
-    </div>
-
-
-    <nav>
-
-        <a href="index.html">
-            Home
-        </a>
-
-        <a href="menu.html">
-            Menu
-        </a>
-
-        <a href="about.html"
-           class="active">
-            About
-        </a>
-
-        <a href="gallery.html">
-            Gallery
-        </a>
-
-        <a href="contact.html">
-            Contact
-        </a>
-
-        <a href="order.html"
-           class="order-btn">
-            🛒 Order
-        </a>
-
-    </nav>
-
-</header>
-
-
-
-<!-- ===============================
-     HERO
-=============================== -->
-
-<section class="hero">
-
-    <div class="hero-content">
-
-        <small>
-            WELCOME TO VEG FOOD JUNCTION
-        </small>
-
-        <h1>
-
-            More Than Food,
-            <span>It's an Experience.</span>
-
-        </h1>
-
-        <p>
-
-            Fresh ingredients, delicious vegetarian
-            flavours and a place where every meal
-            brings people together.
-
-        </p>
-
-    </div>
-
-</section>
-
-
-
-<!-- ===============================
-     OUR STORY
-=============================== -->
-
-<section class="section">
-
-    <div class="container">
-
-        <div class="section-title">
-
-            <small>
-                OUR STORY
-            </small>
-
-            <h2>
-                A Taste Worth Remembering
-            </h2>
-
-            <p>
-                Simple food. Honest flavours.
-                Happy customers.
-            </p>
+            🌿 Veg <span>Food Junction</span>
 
         </div>
 
 
-        <div class="about-grid">
+        <nav>
+
+            <a href="index.html">
+                Home
+            </a>
+
+            <a href="menu.html">
+                Menu
+            </a>
+
+            <a href="about.html"
+               class="active">
+                About
+            </a>
+
+            <a href="gallery.html">
+                Gallery
+            </a>
+
+            <a href="contact.html">
+                Contact
+            </a>
+
+            <a href="order.html"
+               class="order-btn">
+                🛒 Order
+            </a>
+
+        </nav>
+
+    </header>
 
 
-            <div class="about-image">
-            </div>
+    <!-- =====================================
+         ABOUT HERO
+    ===================================== -->
+
+    <section class="about-hero">
+
+        <div class="about-hero-content">
+
+            <small>
+                ABOUT VEG FOOD JUNCTION
+            </small>
+
+            <h1>
+                Our <span>Story</span>
+            </h1>
+
+            <p>
+                Jahan delicious vegetarian food,
+                quality ingredients aur apnapan
+                ek saath milta hai.
+            </p>
+
+        </div>
+
+    </section>
 
 
-            <div class="about-content">
+    <!-- =====================================
+         OUR STORY
+    ===================================== -->
+
+    <section class="section">
+
+        <div class="container">
+
+            <div class="title">
 
                 <small>
-                    ABOUT VEG FOOD JUNCTION
+                    WHO WE ARE
                 </small>
 
                 <h2>
-                    Fresh Food.
-                    Happy People.
+                    A Place Made With Love
                 </h2>
 
-
                 <p>
-
-                    <strong>Veg Food Junction</strong>
-                    is a place where fresh ingredients,
-                    delicious vegetarian food and a warm
-                    atmosphere come together.
-
+                    Simple food. Honest flavours.
+                    Great memories.
                 </p>
 
-
-                <p>
-
-                    Hamara goal simple hai —
-                    har customer ko tasty, fresh aur
-                    satisfying food experience dena.
-
-                </p>
+            </div>
 
 
-                <p>
-
-                    Ek refreshing cup of chai aur coffee
-                    se lekar starters, pizza, patties,
-                    pastries, snacks aur complete
-                    vegetarian meals tak — yahan har
-                    mood ke liye kuch special hai.
-
-                </p>
+            <div class="story">
 
 
-                <div class="quote">
+                <div class="story-image">
+                </div>
 
-                    "Good food is not just something
-                    you eat — it's something you remember."
+
+                <div class="story-content">
+
+                    <small>
+                        OUR JOURNEY
+                    </small>
+
+                    <h2>
+                        More Than Just A Restaurant
+                    </h2>
+
+
+                    <p>
+
+                        <strong>
+                            Veg Food Junction
+                        </strong>
+                        ek aisi jagah hai jahan tasty
+                        vegetarian food ke saath ek
+                        comfortable aur friendly
+                        environment milta hai.
+
+                    </p>
+
+
+                    <p>
+
+                        Hamara focus simple hai —
+                        fresh ingredients ka use karna,
+                        food ko care ke saath prepare
+                        karna aur customers ko
+                        memorable experience dena.
+
+                    </p>
+
+
+                    <p>
+
+                        Chai aur coffee se lekar
+                        starters, fast food, bakery,
+                        desserts aur complete vegetarian
+                        meals tak, hum har taste ke
+                        liye kuch special offer karte hain.
+
+                    </p>
+
+
+                    <div class="story-quote">
+
+                        "Good food creates good memories."
+
+                    </div>
 
                 </div>
 
@@ -1261,539 +1442,534 @@
 
         </div>
 
-    </div>
+    </section>
 
-</section>
 
+    <!-- =====================================
+         VALUES
+    ===================================== -->
 
+    <section class="section values-section">
 
-<!-- ===============================
-     OUR VALUES
-=============================== -->
+        <div class="container">
 
-<section class="section">
 
-    <div class="container">
-
-        <div class="section-title">
-
-            <small>
-                WHAT WE BELIEVE
-            </small>
-
-            <h2>
-                Our Values
-            </h2>
-
-            <p>
-                Har plate ke peeche hamari kuch simple
-                values hain.
-            </p>
-
-        </div>
-
-
-        <div class="values">
-
-
-            <div class="value-card">
-
-                <div class="value-icon">
-                    🌱
-                </div>
-
-                <h3>
-                    100% Vegetarian
-                </h3>
-
-                <p>
-                    Delicious vegetarian food
-                    for everyone.
-                </p>
-
-            </div>
-
-
-            <div class="value-card">
-
-                <div class="value-icon">
-                    🥬
-                </div>
-
-                <h3>
-                    Fresh Ingredients
-                </h3>
-
-                <p>
-                    Quality ingredients aur
-                    fresh preparation.
-                </p>
-
-            </div>
-
-
-            <div class="value-card">
-
-                <div class="value-icon">
-                    👨‍🍳
-                </div>
-
-                <h3>
-                    Made With Care
-                </h3>
-
-                <p>
-                    Har dish ko care aur
-                    attention ke saath prepare kiya jata hai.
-                </p>
-
-            </div>
-
-
-            <div class="value-card">
-
-                <div class="value-icon">
-                    ❤️
-                </div>
-
-                <h3>
-                    Customer First
-                </h3>
-
-                <p>
-                    Aapki satisfaction hamari
-                    sabse badi priority hai.
-                </p>
-
-            </div>
-
-        </div>
-
-    </div>
-
-</section>
-
-
-
-<!-- ===============================
-     WHAT WE OFFER
-=============================== -->
-
-<section class="section offer-section">
-
-    <div class="container">
-
-        <div class="section-title">
-
-            <small>
-                OUR MENU
-            </small>
-
-            <h2>
-                Something for Everyone
-            </h2>
-
-            <p>
-                Apne mood ke according apna
-                favourite food choose karo.
-            </p>
-
-        </div>
-
-
-        <div class="offers">
-
-
-            <div class="offer">
-
-                <div class="offer-icon">
-                    ☕
-                </div>
-
-                <h3>
-                    Chai & Coffee
-                </h3>
-
-                <p>
-                    Fresh tea, coffee aur
-                    refreshing beverages.
-                </p>
-
-            </div>
-
-
-            <div class="offer">
-
-                <div class="offer-icon">
-                    🥗
-                </div>
-
-                <h3>
-                    Starters
-                </h3>
-
-                <p>
-                    Paneer tikka, fries,
-                    crispy snacks aur more.
-                </p>
-
-            </div>
-
-
-            <div class="offer">
-
-                <div class="offer-icon">
-                    🍕
-                </div>
-
-                <h3>
-                    Fast Food
-                </h3>
-
-                <p>
-                    Pizza, burger, sandwich
-                    aur tasty snacks.
-                </p>
-
-            </div>
-
-
-            <div class="offer">
-
-                <div class="offer-icon">
-                    🍛
-                </div>
-
-                <h3>
-                    Main Course
-                </h3>
-
-                <p>
-                    Delicious vegetarian meals
-                    aur special thali.
-                </p>
-
-            </div>
-
-
-            <div class="offer">
-
-                <div class="offer-icon">
-                    🥐
-                </div>
-
-                <h3>
-                    Bakery
-                </h3>
-
-                <p>
-                    Fresh patties, pastries
-                    aur baked items.
-                </p>
-
-            </div>
-
-
-            <div class="offer">
-
-                <div class="offer-icon">
-                    🍰
-                </div>
-
-                <h3>
-                    Desserts
-                </h3>
-
-                <p>
-                    Sweet treats jo meal ko
-                    perfect ending dete hain.
-                </p>
-
-            </div>
-
-        </div>
-
-    </div>
-
-</section>
-
-
-
-<!-- ===============================
-     MISSION
-=============================== -->
-
-<section class="section">
-
-    <div class="container">
-
-        <div class="mission">
-
-
-            <div class="mission-content">
+            <div class="title">
 
                 <small>
-                    OUR MISSION
+                    WHAT MATTERS TO US
                 </small>
 
                 <h2>
-                    Taste With Purpose
+                    Our Values
                 </h2>
 
                 <p>
-
-                    Humara mission sirf food serve
-                    karna nahi hai. Hum quality,
-                    taste aur happiness ko ek plate
-                    mein serve karna chahte hain.
-
+                    Har dish ke peeche hamari
+                    kuch simple values hain.
                 </p>
 
+            </div>
 
-                <div class="mission-list">
 
-                    <div>
-                        ✓ Fresh & Quality Ingredients
+            <div class="values">
+
+
+                <div class="value-card">
+
+                    <div class="icon">
+                        🌱
                     </div>
 
-                    <div>
-                        ✓ Delicious Vegetarian Food
+                    <h3>
+                        Vegetarian
+                    </h3>
+
+                    <p>
+                        Delicious vegetarian food
+                        prepared for everyone.
+                    </p>
+
+                </div>
+
+
+                <div class="value-card">
+
+                    <div class="icon">
+                        🥬
                     </div>
 
-                    <div>
-                        ✓ Clean & Comfortable Environment
+                    <h3>
+                        Freshness
+                    </h3>
+
+                    <p>
+                        Fresh ingredients aur
+                        quality preparation.
+                    </p>
+
+                </div>
+
+
+                <div class="value-card">
+
+                    <div class="icon">
+                        👨‍🍳
                     </div>
 
-                    <div>
-                        ✓ Affordable Prices
+                    <h3>
+                        Quality
+                    </h3>
+
+                    <p>
+                        Har dish ko attention
+                        aur care ke saath prepare kiya jata hai.
+                    </p>
+
+                </div>
+
+
+                <div class="value-card">
+
+                    <div class="icon">
+                        ❤️
                     </div>
 
-                    <div>
-                        ✓ Friendly Customer Service
-                    </div>
+                    <h3>
+                        Happiness
+                    </h3>
+
+                    <p>
+                        Customer satisfaction
+                        hamari priority hai.
+                    </p>
 
                 </div>
 
             </div>
 
+        </div>
 
-            <div class="mission-image">
+    </section>
+
+
+    <!-- =====================================
+         MISSION
+    ===================================== -->
+
+    <section class="section">
+
+        <div class="container">
+
+
+            <div class="mission">
+
+
+                <div class="mission-content">
+
+                    <small>
+                        OUR MISSION
+                    </small>
+
+                    <h2>
+                        Taste With Purpose
+                    </h2>
+
+
+                    <p>
+
+                        Humara mission sirf food
+                        serve karna nahi hai.
+                        Hum quality, taste aur
+                        happiness ko ek plate mein
+                        serve karna chahte hain.
+
+                    </p>
+
+
+                    <div class="mission-list">
+
+                        <div>
+                            ✓ Fresh & Quality Ingredients
+                        </div>
+
+                        <div>
+                            ✓ Delicious Vegetarian Food
+                        </div>
+
+                        <div>
+                            ✓ Clean Environment
+                        </div>
+
+                        <div>
+                            ✓ Affordable Prices
+                        </div>
+
+                        <div>
+                            ✓ Friendly Service
+                        </div>
+
+                    </div>
+
+                </div>
+
+
+                <div class="mission-image">
+                </div>
+
             </div>
 
         </div>
 
-    </div>
-
-</section>
+    </section>
 
 
+    <!-- =====================================
+         LOCATION / GOOGLE MAP
+    ===================================== -->
 
-<!-- ===============================
-     LOCATION
-=============================== -->
-
-<section class="section location-section">
-
-    <div class="container">
+    <section class="location-section">
 
 
-        <div class="section-title">
-
-            <small>
-                COME VISIT US
-            </small>
-
-            <h2>
-                Find Us
-            </h2>
-
-            <p>
-                Aaiye, milkar delicious vegetarian
-                food enjoy karte hain.
-            </p>
-
-        </div>
+        <div class="location-container">
 
 
-        <div class="location-card">
-
-
-            <div class="location-map">
-            </div>
-
-
-            <div class="location-info">
+            <div class="location-title">
 
                 <small>
-                    OUR LOCATION
+                    COME VISIT US
                 </small>
 
                 <h2>
-                    Veg Food Junction
+                    Find Us
                 </h2>
 
+                <p>
+                    Aaiye, milkar delicious vegetarian
+                    food enjoy karte hain.
+                </p>
 
-                <div class="info-item">
-
-                    <div class="info-icon">
-                        📍
-                    </div>
-
-                    <div>
-
-                        <strong>
-                            Address
-                        </strong>
-
-                        <span>
-
-                            Shukla Vihar Colony,
-                            Devpur Para,<br>
-
-                            Near Saint Anthony
-                            Public School,<br>
-
-                            Lucknow, Uttar Pradesh
-
-                        </span>
-
-                    </div>
-
-                </div>
+            </div>
 
 
-                <div class="info-item">
+            <div class="location-card">
 
-                    <div class="info-icon">
-                        📮
-                    </div>
 
-                    <div>
+                <!-- =================================
+                     GOOGLE MAP
+                ================================= -->
 
-                        <strong>
-                            PIN Code
-                        </strong>
+                <div class="location-map">
 
-                        <span>
-                            226017
-                        </span>
+                    <iframe
 
-                    </div>
+                        src="https://www.google.com/maps?q=Shukla%20Vihar%20Colony,%20Devpur%20Para,%20Near%20Saint%20Anthony%20Public%20School,%20Lucknow,%20Uttar%20Pradesh%20226017&output=embed"
+
+                        width="100%"
+
+                        height="100%"
+
+                        style="border:0;"
+
+                        allowfullscreen=""
+
+                        loading="lazy"
+
+                        referrerpolicy="no-referrer-when-downgrade">
+
+                    </iframe>
 
                 </div>
 
 
-                <div class="info-item">
+                <!-- =================================
+                     LOCATION DETAILS
+                ================================= -->
 
-                    <div class="info-icon">
-                        📞
+                <div class="location-info">
+
+
+                    <small>
+                        OUR LOCATION
+                    </small>
+
+
+                    <h2>
+                        Veg Food Junction
+                    </h2>
+
+
+                    <!-- ADDRESS -->
+
+                    <div class="location-item">
+
+                        <div class="location-icon">
+                            📍
+                        </div>
+
+                        <div>
+
+                            <strong>
+                                Address
+                            </strong>
+
+                            <p>
+
+                                Shukla Vihar Colony,
+                                Devpur Para,<br>
+
+                                Near Saint Anthony
+                                Public School,<br>
+
+                                Lucknow, Uttar Pradesh
+
+                            </p>
+
+                        </div>
+
                     </div>
 
-                    <div>
 
-                        <strong>
-                            Contact
-                        </strong>
+                    <!-- PIN -->
 
-                        <a href="tel:7380756957">
+                    <div class="location-item">
 
-                            7380756957
+                        <div class="location-icon">
+                            📮
+                        </div>
+
+                        <div>
+
+                            <strong>
+                                PIN Code
+                            </strong>
+
+                            <p>
+                                226017
+                            </p>
+
+                        </div>
+
+                    </div>
+
+
+                    <!-- CONTACT -->
+
+                    <div class="location-item">
+
+                        <div class="location-icon">
+                            📞
+                        </div>
+
+                        <div>
+
+                            <strong>
+                                Contact
+                            </strong>
+
+                            <a href="tel:7380756957">
+
+                                7380756957
+
+                            </a>
+
+                        </div>
+
+                    </div>
+
+
+                    <!-- BUTTONS -->
+
+                    <div class="location-buttons">
+
+
+                        <a
+
+                            href="https://www.google.com/maps/search/?api=1&query=Shukla%20Vihar%20Colony%20Devpur%20Para%20Near%20Saint%20Anthony%20Public%20School%20Lucknow%20Uttar%20Pradesh%20226017"
+
+                            target="_blank"
+
+                            class="direction-btn">
+
+                            🗺️ Get Directions
 
                         </a>
 
+
+                        <a
+
+                            href="tel:7380756957"
+
+                            class="call-btn">
+
+                            📞 Call Us
+
+                        </a>
+
+
                     </div>
 
                 </div>
-
-
-                <a href="tel:7380756957"
-                   class="call-btn">
-
-                    📞 Call Us
-
-                </a>
 
             </div>
 
         </div>
 
-    </div>
-
-</section>
+    </section>
 
 
+    <!-- =====================================
+         OWNER
+    ===================================== -->
 
-<!-- ===============================
-     CTA
-=============================== -->
-
-<section class="cta">
-
-    <h2>
-        Ready to Taste the Difference?
-    </h2>
-
-    <p>
-        Fresh food, great flavours and
-        unforgettable moments are waiting for you.
-    </p>
-
-    <a href="menu.html">
-        Explore Our Menu →
-    </a>
-
-</section>
+    <section class="owner-section">
 
 
-
-<!-- ===============================
-     FOOTER
-=============================== -->
-
-<footer>
-
-    <h2>
-        🌿 Veg Food Junction
-    </h2>
-
-    <p>
-        Fresh • Healthy • Delicious • 100% Vegetarian
-    </p>
+        <div class="owner-box">
 
 
-    <div class="footer-links">
+            <!-- OWNER PHOTO -->
 
-        <a href="index.html">
-            Home
-        </a>
+            <div class="owner-photo">
+
+                <img
+
+                    src="dhashugamerop.jpeg"
+
+                    alt="Aryan Verma - Founder and Owner">
+
+            </div>
+
+
+            <!-- OWNER DETAILS -->
+
+            <div class="owner-content">
+
+                <small>
+                    MEET THE OWNER
+                </small>
+
+
+                <h2>
+                    Aryan Verma
+                </h2>
+
+
+                <h3>
+                    Founder & Owner
+                </h3>
+
+
+                <p>
+
+                    Veg Food Junction ke peeche ek
+                    simple vision hai — logon ko
+                    delicious vegetarian food ke saath
+                    ek warm aur memorable experience
+                    dena.
+
+                </p>
+
+
+                <div class="owner-quote">
+
+                    "Good food brings people together."
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- =====================================
+         CTA
+    ===================================== -->
+
+    <section class="cta">
+
+        <h2>
+            Come & Experience Us
+        </h2>
+
+
+        <p>
+
+            Fresh food, great flavours aur
+            good memories aapka wait kar rahe hain.
+
+        </p>
+
 
         <a href="menu.html">
-            Menu
+
+            Explore Our Menu →
+
         </a>
 
-        <a href="about.html">
-            About
-        </a>
-
-        <a href="gallery.html">
-            Gallery
-        </a>
-
-        <a href="contact.html">
-            Contact
-        </a>
-
-    </div>
+    </section>
 
 
-    <p>
-        © 2026 Veg Food Junction.
-        All Rights Reserved.
-    </p>
+    <!-- =====================================
+         FOOTER
+    ===================================== -->
 
-</footer>
+    <footer>
+
+
+        <h2>
+            🌿 Veg Food Junction
+        </h2>
+
+
+        <p>
+            Fresh • Healthy • Delicious • 100% Vegetarian
+        </p>
+
+
+        <div class="footer-links">
+
+
+            <a href="index.html">
+                Home
+            </a>
+
+
+            <a href="menu.html">
+                Menu
+            </a>
+
+
+            <a href="about.html">
+                About
+            </a>
+
+
+            <a href="gallery.html">
+                Gallery
+            </a>
+
+
+            <a href="contact.html">
+                Contact
+            </a>
+
+        </div>
+
+
+        <p>
+
+            © 2026 Veg Food Junction.
+            All Rights Reserved.
+
+        </p>
+
+    </footer>
 
 
 </body>
 
 </html>
+```
