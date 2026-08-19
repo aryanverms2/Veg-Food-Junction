@@ -1,0 +1,2038 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+
+    <title>Veg Food Junction | Lucknow</title>
+
+    <link rel="preconnect"
+          href="https://fonts.googleapis.com">
+
+    <link rel="preconnect"
+          href="https://fonts.gstatic.com"
+          crossorigin>
+
+    <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display&family=Poppins:wght@400;500;600;700;800&display=swap"
+          rel="stylesheet">
+
+
+<style>
+
+/* =====================================================
+   RESET
+===================================================== */
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+html{
+    scroll-behavior:smooth;
+}
+
+body{
+    font-family:"Poppins",sans-serif;
+    background:#f7f8f3;
+    color:#222;
+}
+
+a{
+    text-decoration:none;
+}
+
+button{
+    font-family:inherit;
+    cursor:pointer;
+}
+
+
+/* =====================================================
+   NAVBAR
+===================================================== */
+
+.navbar{
+
+    width:100%;
+
+    min-height:75px;
+
+    padding:15px 6%;
+
+    background:white;
+
+    display:flex;
+
+    align-items:center;
+
+    justify-content:space-between;
+
+    border-bottom:1px solid #e5e5e5;
+
+    position:sticky;
+
+    top:0;
+
+    z-index:1000;
+
+}
+
+
+.logo{
+
+    font-size:20px;
+
+    font-weight:800;
+
+    color:#23763a;
+
+}
+
+
+.logo span{
+
+    color:#222;
+
+}
+
+
+.nav-links{
+
+    display:flex;
+
+    align-items:center;
+
+    gap:25px;
+
+}
+
+
+.nav-links a{
+
+    font-size:12px;
+
+    color:#333;
+
+    font-weight:500;
+
+    transition:.3s;
+
+}
+
+
+.nav-links a:hover{
+
+    color:#23763a;
+
+}
+
+
+.order-btn{
+
+    background:#23763a !important;
+
+    color:white !important;
+
+    padding:11px 19px;
+
+    border-radius:30px;
+
+}
+
+
+.order-btn:hover{
+
+    background:#174f27 !important;
+
+}
+
+
+/* =====================================================
+   HERO
+===================================================== */
+
+.hero{
+
+    min-height:650px;
+
+    position:relative;
+
+    overflow:hidden;
+
+    display:flex;
+
+    align-items:center;
+
+    justify-content:center;
+
+    text-align:center;
+
+}
+
+
+/* RESTAURANT PHOTO */
+
+.hero img{
+
+    position:absolute;
+
+    inset:0;
+
+    width:100%;
+
+    height:100%;
+
+    object-fit:cover;
+
+    object-position:center;
+
+}
+
+
+/* DARK OVERLAY */
+
+.hero::after{
+
+    content:"";
+
+    position:absolute;
+
+    inset:0;
+
+    background:
+
+    linear-gradient(
+
+        rgba(7,35,17,.62),
+
+        rgba(7,35,17,.72)
+
+    );
+
+}
+
+
+/* HERO CONTENT */
+
+.hero-content{
+
+    position:relative;
+
+    z-index:2;
+
+    color:white;
+
+    padding:20px;
+
+    max-width:850px;
+
+}
+
+
+.hero-small{
+
+    color:#c5e9a7;
+
+    font-size:11px;
+
+    letter-spacing:5px;
+
+    font-weight:700;
+
+}
+
+
+.hero h1{
+
+    font-family:"DM Serif Display",serif;
+
+    font-weight:400;
+
+    font-size:clamp(55px,8vw,100px);
+
+    line-height:.95;
+
+    margin:18px 0;
+
+}
+
+
+.hero h1 span{
+
+    color:#bde69c;
+
+}
+
+
+.hero p{
+
+    max-width:600px;
+
+    margin:auto;
+
+    color:#e2ebe4;
+
+    font-size:14px;
+
+    line-height:1.8;
+
+}
+
+
+/* HERO BUTTONS */
+
+.hero-buttons{
+
+    margin-top:30px;
+
+    display:flex;
+
+    justify-content:center;
+
+    gap:12px;
+
+    flex-wrap:wrap;
+
+}
+
+
+.primary-btn{
+
+    background:#bde69c;
+
+    color:#173c22;
+
+    padding:13px 25px;
+
+    border-radius:30px;
+
+    font-size:12px;
+
+    font-weight:800;
+
+    transition:.3s;
+
+}
+
+
+.primary-btn:hover{
+
+    transform:translateY(-3px);
+
+    background:white;
+
+}
+
+
+.secondary-btn{
+
+    color:white;
+
+    border:1px solid rgba(255,255,255,.5);
+
+    padding:12px 25px;
+
+    border-radius:30px;
+
+    font-size:12px;
+
+    font-weight:600;
+
+}
+
+
+.secondary-btn:hover{
+
+    background:white;
+
+    color:#173c22;
+
+}
+
+
+/* =====================================================
+   INTRO
+===================================================== */
+
+.intro{
+
+    padding:80px 6%;
+
+    text-align:center;
+
+    background:white;
+
+}
+
+
+.section-label{
+
+    color:#23763a;
+
+    font-size:10px;
+
+    font-weight:800;
+
+    letter-spacing:4px;
+
+}
+
+
+.intro h2{
+
+    font-family:"DM Serif Display",serif;
+
+    font-size:48px;
+
+    font-weight:400;
+
+    color:#1d4829;
+
+    margin:12px 0;
+
+}
+
+
+.intro p{
+
+    max-width:700px;
+
+    margin:auto;
+
+    color:#777;
+
+    font-size:13px;
+
+    line-height:1.9;
+
+}
+
+
+/* =====================================================
+   FEATURES
+===================================================== */
+
+.features{
+
+    padding:0 6% 80px;
+
+    background:white;
+
+}
+
+
+.feature-grid{
+
+    max-width:1100px;
+
+    margin:auto;
+
+    display:grid;
+
+    grid-template-columns:
+
+    repeat(4,1fr);
+
+    gap:18px;
+
+}
+
+
+.feature-card{
+
+    padding:30px 20px;
+
+    background:#f6f8f1;
+
+    border-radius:18px;
+
+    text-align:center;
+
+    border:1px solid #e8eadf;
+
+    transition:.3s;
+
+}
+
+
+.feature-card:hover{
+
+    transform:translateY(-7px);
+
+    box-shadow:
+
+    0 15px 35px rgba(0,0,0,.07);
+
+}
+
+
+.feature-icon{
+
+    font-size:35px;
+
+    margin-bottom:12px;
+
+}
+
+
+.feature-card h3{
+
+    font-size:14px;
+
+    margin-bottom:7px;
+
+}
+
+
+.feature-card p{
+
+    color:#888;
+
+    font-size:10px;
+
+    line-height:1.6;
+
+}
+
+
+/* =====================================================
+   ABOUT SECTION
+===================================================== */
+
+.about{
+
+    padding:100px 6%;
+
+    background:#f3f5ed;
+
+}
+
+
+.about-container{
+
+    max-width:1150px;
+
+    margin:auto;
+
+    display:grid;
+
+    grid-template-columns:
+
+    1fr 1fr;
+
+    gap:70px;
+
+    align-items:center;
+
+}
+
+
+.about-image{
+
+    height:480px;
+
+    border-radius:25px;
+
+    overflow:hidden;
+
+    position:relative;
+
+    box-shadow:
+
+    0 20px 50px rgba(0,0,0,.12);
+
+}
+
+
+.about-image img{
+
+    width:100%;
+
+    height:100%;
+
+    object-fit:cover;
+
+}
+
+
+.about-content{
+
+    padding:10px;
+
+}
+
+
+.about-content h2{
+
+    font-family:"DM Serif Display",serif;
+
+    font-size:55px;
+
+    font-weight:400;
+
+    color:#1d4829;
+
+    line-height:1.05;
+
+    margin:12px 0 20px;
+
+}
+
+
+.about-content p{
+
+    color:#777;
+
+    font-size:13px;
+
+    line-height:1.9;
+
+    margin-bottom:15px;
+
+}
+
+
+.read-btn{
+
+    display:inline-block;
+
+    margin-top:10px;
+
+    background:#23763a;
+
+    color:white;
+
+    padding:12px 22px;
+
+    border-radius:30px;
+
+    font-size:11px;
+
+    font-weight:700;
+
+}
+
+
+.read-btn:hover{
+
+    background:#174f27;
+
+}
+
+
+/* =====================================================
+   MENU PREVIEW
+===================================================== */
+
+.menu-preview{
+
+    padding:100px 6%;
+
+    background:white;
+
+    text-align:center;
+
+}
+
+
+.menu-preview h2{
+
+    font-family:"DM Serif Display",serif;
+
+    font-size:52px;
+
+    font-weight:400;
+
+    color:#1d4829;
+
+    margin:10px 0;
+
+}
+
+
+.menu-subtitle{
+
+    color:#888;
+
+    font-size:12px;
+
+    max-width:600px;
+
+    margin:0 auto 45px;
+
+}
+
+
+.menu-grid{
+
+    max-width:1100px;
+
+    margin:auto;
+
+    display:grid;
+
+    grid-template-columns:
+
+    repeat(4,1fr);
+
+    gap:20px;
+
+}
+
+
+.food-card{
+
+    background:#fafbf7;
+
+    border:1px solid #e6e8df;
+
+    border-radius:18px;
+
+    padding:18px;
+
+    text-align:left;
+
+    transition:.3s;
+
+}
+
+
+.food-card:hover{
+
+    transform:translateY(-7px);
+
+    box-shadow:
+
+    0 15px 35px rgba(0,0,0,.08);
+
+}
+
+
+.food-img{
+
+    height:180px;
+
+    border-radius:14px;
+
+    background:#e9f0e2;
+
+    display:flex;
+
+    align-items:center;
+
+    justify-content:center;
+
+    font-size:65px;
+
+    margin-bottom:15px;
+
+}
+
+
+.food-card h3{
+
+    font-size:15px;
+
+    margin-bottom:5px;
+
+}
+
+
+.food-card p{
+
+    color:#888;
+
+    font-size:10px;
+
+    line-height:1.6;
+
+}
+
+
+.food-bottom{
+
+    margin-top:15px;
+
+    display:flex;
+
+    align-items:center;
+
+    justify-content:space-between;
+
+}
+
+
+.food-price{
+
+    color:#23763a;
+
+    font-size:15px;
+
+    font-weight:800;
+
+}
+
+
+.small-order{
+
+    background:#23763a;
+
+    color:white;
+
+    padding:8px 12px;
+
+    border-radius:20px;
+
+    font-size:9px;
+
+    font-weight:700;
+
+}
+
+
+.small-order:hover{
+
+    background:#174f27;
+
+}
+
+
+.all-menu{
+
+    display:inline-block;
+
+    margin-top:40px;
+
+    padding:13px 25px;
+
+    background:#173c22;
+
+    color:white;
+
+    border-radius:30px;
+
+    font-size:11px;
+
+    font-weight:700;
+
+}
+
+
+/* =====================================================
+   RESTAURANT PHOTO BANNER
+===================================================== */
+
+.photo-banner{
+
+    min-height:430px;
+
+    position:relative;
+
+    display:flex;
+
+    align-items:center;
+
+    justify-content:center;
+
+    text-align:center;
+
+    overflow:hidden;
+
+}
+
+
+.photo-banner img{
+
+    position:absolute;
+
+    inset:0;
+
+    width:100%;
+
+    height:100%;
+
+    object-fit:cover;
+
+}
+
+
+.photo-banner::after{
+
+    content:"";
+
+    position:absolute;
+
+    inset:0;
+
+    background:rgba(8,38,19,.67);
+
+}
+
+
+.banner-content{
+
+    position:relative;
+
+    z-index:2;
+
+    color:white;
+
+    padding:20px;
+
+}
+
+
+.banner-content h2{
+
+    font-family:"DM Serif Display",serif;
+
+    font-size:55px;
+
+    font-weight:400;
+
+}
+
+
+.banner-content p{
+
+    font-size:12px;
+
+    color:#dce7df;
+
+    margin:10px 0 25px;
+
+}
+
+
+/* =====================================================
+   LOCATION
+===================================================== */
+
+.location{
+
+    padding:80px 6%;
+
+    background:#f5f7f0;
+
+    text-align:center;
+
+}
+
+
+.location h2{
+
+    font-family:"DM Serif Display",serif;
+
+    color:#1d4829;
+
+    font-size:48px;
+
+    font-weight:400;
+
+    margin:10px 0 25px;
+
+}
+
+
+.address{
+
+    max-width:600px;
+
+    margin:auto;
+
+    background:white;
+
+    padding:25px;
+
+    border-radius:18px;
+
+    border:1px solid #e3e5dc;
+
+}
+
+
+.address p{
+
+    font-size:12px;
+
+    color:#777;
+
+    line-height:2;
+
+}
+
+
+.address strong{
+
+    color:#23763a;
+
+}
+
+
+/* =====================================================
+   FOOTER
+===================================================== */
+
+footer{
+
+    background:#102217;
+
+    color:white;
+
+    padding:60px 6% 25px;
+
+}
+
+
+.footer-grid{
+
+    max-width:1100px;
+
+    margin:auto;
+
+    display:grid;
+
+    grid-template-columns:
+
+    1.5fr 1fr 1fr 1fr;
+
+    gap:35px;
+
+}
+
+
+.footer-logo{
+
+    font-size:20px;
+
+    font-weight:800;
+
+    color:#bde69c;
+
+    margin-bottom:12px;
+
+}
+
+
+.footer-col h3{
+
+    font-size:13px;
+
+    margin-bottom:15px;
+
+}
+
+
+.footer-col p{
+
+    color:#aab6ad;
+
+    font-size:10px;
+
+    line-height:1.9;
+
+    margin:5px 0;
+
+}
+
+
+.footer-col a{
+
+    display:block;
+
+    color:#aab6ad;
+
+    font-size:10px;
+
+    margin:8px 0;
+
+}
+
+
+.footer-col a:hover{
+
+    color:#bde69c;
+
+}
+
+
+.footer-bottom{
+
+    max-width:1100px;
+
+    margin:45px auto 0;
+
+    padding-top:20px;
+
+    border-top:1px solid rgba(255,255,255,.1);
+
+    text-align:center;
+
+    color:#78847c;
+
+    font-size:10px;
+
+}
+
+
+/* =====================================================
+   RESPONSIVE
+===================================================== */
+
+@media(max-width:950px){
+
+    .feature-grid{
+
+        grid-template-columns:
+
+        repeat(2,1fr);
+
+    }
+
+
+    .menu-grid{
+
+        grid-template-columns:
+
+        repeat(2,1fr);
+
+    }
+
+
+    .about-container{
+
+        grid-template-columns:1fr;
+
+        gap:40px;
+
+    }
+
+
+    .about-image{
+
+        height:400px;
+
+    }
+
+
+    .footer-grid{
+
+        grid-template-columns:
+
+        repeat(2,1fr);
+
+    }
+
+}
+
+
+@media(max-width:650px){
+
+    .navbar{
+
+        flex-direction:column;
+
+        gap:15px;
+
+    }
+
+
+    .nav-links{
+
+        flex-wrap:wrap;
+
+        justify-content:center;
+
+        gap:13px;
+
+    }
+
+
+    .hero{
+
+        min-height:570px;
+
+    }
+
+
+    .hero h1{
+
+        font-size:55px;
+
+    }
+
+
+    .intro h2,
+    .menu-preview h2,
+    .location h2{
+
+        font-size:40px;
+
+    }
+
+
+    .feature-grid,
+    .menu-grid{
+
+        grid-template-columns:1fr;
+
+    }
+
+
+    .about-content h2{
+
+        font-size:42px;
+
+    }
+
+
+    .banner-content h2{
+
+        font-size:42px;
+
+    }
+
+
+    .footer-grid{
+
+        grid-template-columns:1fr;
+
+        text-align:center;
+
+    }
+
+}
+
+</style>
+
+</head>
+
+
+<body>
+
+
+<!-- =====================================================
+     NAVBAR
+===================================================== -->
+
+<header class="navbar">
+
+
+    <div class="logo">
+
+        🌿 Veg <span>Food Junction</span>
+
+    </div>
+
+
+    <nav class="nav-links">
+
+        <a href="index.html">
+            Home
+        </a>
+
+        <a href="menu.html">
+            Menu
+        </a>
+
+        <a href="about.html">
+            About
+        </a>
+
+        <a href="gallery.html">
+            Gallery
+        </a>
+
+        <a href="contact.html">
+            Contact
+        </a>
+
+        <a href="order.html"
+           class="order-btn">
+
+            🛒 Order Now
+
+        </a>
+
+    </nav>
+
+</header>
+
+
+
+<!-- =====================================================
+     HERO
+===================================================== -->
+
+<section class="hero">
+
+
+    <!-- APNI RESTAURANT PHOTO -->
+
+    <img
+        src="restaurant.jpg"
+        alt="Veg Food Junction Restaurant">
+
+
+    <div class="hero-content">
+
+
+        <div class="hero-small">
+
+            WELCOME TO
+
+        </div>
+
+
+        <h1>
+
+            Veg <span>Food</span>
+            Junction
+
+        </h1>
+
+
+        <p>
+
+            Fresh vegetarian food, refreshing drinks
+            and delicious flavours — all served with
+            love in the heart of Lucknow.
+
+        </p>
+
+
+        <div class="hero-buttons">
+
+
+            <a
+                href="menu.html"
+                class="primary-btn">
+
+                🍽️ Explore Menu
+
+            </a>
+
+
+            <a
+                href="order.html"
+                class="secondary-btn">
+
+                🛒 Order Now
+
+            </a>
+
+
+        </div>
+
+
+    </div>
+
+</section>
+
+
+
+<!-- =====================================================
+     INTRO
+===================================================== -->
+
+<section class="intro">
+
+
+    <div class="section-label">
+
+        OUR STORY
+
+    </div>
+
+
+    <h2>
+
+        Taste That Feels Like Home
+
+    </h2>
+
+
+    <p>
+
+        Veg Food Junction ek pure vegetarian food
+        destination hai jahan hum fresh ingredients,
+        delicious recipes aur friendly service ke saath
+        aapko ek memorable dining experience dene ki
+        koshish karte hain.
+
+    </p>
+
+
+</section>
+
+
+
+<!-- =====================================================
+     FEATURES
+===================================================== -->
+
+<section class="features">
+
+
+    <div class="feature-grid">
+
+
+        <div class="feature-card">
+
+            <div class="feature-icon">
+                🥬
+            </div>
+
+            <h3>
+                Fresh Ingredients
+            </h3>
+
+            <p>
+                Fresh aur quality ingredients ka use.
+            </p>
+
+        </div>
+
+
+        <div class="feature-card">
+
+            <div class="feature-icon">
+                🌿
+            </div>
+
+            <h3>
+                100% Vegetarian
+            </h3>
+
+            <p>
+                Pure vegetarian food for everyone.
+            </p>
+
+        </div>
+
+
+        <div class="feature-card">
+
+            <div class="feature-icon">
+                👨‍🍳
+            </div>
+
+            <h3>
+                Made With Love
+            </h3>
+
+            <p>
+                Har dish ko care ke saath prepare kiya jata hai.
+            </p>
+
+        </div>
+
+
+        <div class="feature-card">
+
+            <div class="feature-icon">
+                🛵
+            </div>
+
+            <h3>
+                Easy Ordering
+            </h3>
+
+            <p>
+                Online order karke easily food enjoy karein.
+            </p>
+
+        </div>
+
+
+    </div>
+
+</section>
+
+
+
+<!-- =====================================================
+     ABOUT
+===================================================== -->
+
+<section class="about">
+
+
+    <div class="about-container">
+
+
+        <div class="about-image">
+
+            <img
+                src="restaurant.jpg"
+                alt="Veg Food Junction">
+
+        </div>
+
+
+        <div class="about-content">
+
+
+            <div class="section-label">
+
+                ABOUT US
+
+            </div>
+
+
+            <h2>
+
+                Good Food.
+                Good Mood.
+
+            </h2>
+
+
+            <p>
+
+                Veg Food Junction mein hum believe karte hain
+                ki achha khana sirf taste ke baare mein nahi
+                hota, balki ek achhe experience ke baare mein
+                bhi hota hai.
+
+            </p>
+
+
+            <p>
+
+                Chai aur coffee se lekar snacks, starters,
+                Chinese, South Indian dishes, main course
+                aur desserts tak — humare menu mein
+                har mood ke liye kuch na kuch hai.
+
+            </p>
+
+
+            <a
+                href="about.html"
+                class="read-btn">
+
+                Read More →
+
+            </a>
+
+
+        </div>
+
+
+    </div>
+
+</section>
+
+
+
+<!-- =====================================================
+     MENU PREVIEW
+===================================================== -->
+
+<section class="menu-preview">
+
+
+    <div class="section-label">
+
+        OUR SPECIALS
+
+    </div>
+
+
+    <h2>
+
+        Popular From Our Kitchen
+
+    </h2>
+
+
+    <p class="menu-subtitle">
+
+        Kuch of our favourite dishes jo customers
+        ko baar-baar order karna pasand hai.
+
+    </p>
+
+
+    <div class="menu-grid">
+
+
+        <!-- CARD 1 -->
+
+        <div class="food-card">
+
+
+            <div class="food-img">
+                🍢
+            </div>
+
+
+            <h3>
+                Paneer Tikka
+            </h3>
+
+
+            <p>
+                Grilled spicy paneer with fresh vegetables.
+            </p>
+
+
+            <div class="food-bottom">
+
+                <span class="food-price">
+                    ₹180
+                </span>
+
+
+                <a
+                    href="menu.html"
+                    class="small-order">
+
+                    Add +
+
+                </a>
+
+            </div>
+
+
+        </div>
+
+
+
+        <!-- CARD 2 -->
+
+        <div class="food-card">
+
+
+            <div class="food-img">
+                ☕
+            </div>
+
+
+            <h3>
+                Masala Chai
+            </h3>
+
+
+            <p>
+                Hot Indian chai with aromatic spices.
+            </p>
+
+
+            <div class="food-bottom">
+
+                <span class="food-price">
+                    ₹30
+                </span>
+
+
+                <a
+                    href="menu.html"
+                    class="small-order">
+
+                    Add +
+
+                </a>
+
+            </div>
+
+
+        </div>
+
+
+
+        <!-- CARD 3 -->
+
+        <div class="food-card">
+
+
+            <div class="food-img">
+                🍜
+            </div>
+
+
+            <h3>
+                Veg Hakka Noodles
+            </h3>
+
+
+            <p>
+                Delicious Chinese style vegetable noodles.
+            </p>
+
+
+            <div class="food-bottom">
+
+                <span class="food-price">
+                    ₹150
+                </span>
+
+
+                <a
+                    href="menu.html"
+                    class="small-order">
+
+                    Add +
+
+                </a>
+
+            </div>
+
+
+        </div>
+
+
+
+        <!-- CARD 4 -->
+
+        <div class="food-card">
+
+
+            <div class="food-img">
+                🍰
+            </div>
+
+
+            <h3>
+                Chocolate Pastry
+            </h3>
+
+
+            <p>
+                Soft and delicious chocolate pastry.
+            </p>
+
+
+            <div class="food-bottom">
+
+                <span class="food-price">
+                    ₹80
+                </span>
+
+
+                <a
+                    href="menu.html"
+                    class="small-order">
+
+                    Add +
+
+                </a>
+
+            </div>
+
+
+        </div>
+
+
+    </div>
+
+
+    <a
+        href="menu.html"
+        class="all-menu">
+
+        View Full Menu →
+
+    </a>
+
+
+</section>
+
+
+
+<!-- =====================================================
+     PHOTO BANNER
+===================================================== -->
+
+<section class="photo-banner">
+
+
+    <img
+        src="restaurant.jpg"
+        alt="Our Restaurant">
+
+
+    <div class="banner-content">
+
+
+        <div class="section-label">
+
+            VISIT US
+
+        </div>
+
+
+        <h2>
+
+            Come Hungry,
+            Leave Happy.
+
+        </h2>
+
+
+        <p>
+
+            Aapka next favourite food destination
+            Lucknow mein aapka wait kar raha hai.
+
+        </p>
+
+
+        <a
+            href="contact.html"
+            class="primary-btn">
+
+            📍 Find Us
+
+        </a>
+
+
+    </div>
+
+</section>
+
+
+
+<!-- =====================================================
+     LOCATION
+===================================================== -->
+
+<section class="location">
+
+
+    <div class="section-label">
+
+        OUR LOCATION
+
+    </div>
+
+
+    <h2>
+
+        Visit Veg Food Junction
+
+    </h2>
+
+
+    <div class="address">
+
+
+        <p>
+
+            📍
+
+            <strong>
+                Shukla Vihar Colony,
+                Devpur Para,
+                Near Saint Anthony Public School
+            </strong>
+
+        </p>
+
+
+        <p>
+
+            Lucknow,
+            Uttar Pradesh -
+            <strong>
+                226017
+            </strong>
+
+        </p>
+
+
+        <p>
+
+            📞
+
+            <strong>
+                7380756957
+            </strong>
+
+        </p>
+
+
+    </div>
+
+
+</section>
+
+
+
+<!-- =====================================================
+     FOOTER
+===================================================== -->
+
+<footer>
+
+
+    <div class="footer-grid">
+
+
+        <!-- COLUMN 1 -->
+
+        <div class="footer-col">
+
+
+            <div class="footer-logo">
+
+                🌿 Veg Food Junction
+
+            </div>
+
+
+            <p>
+
+                Fresh, delicious and
+                100% vegetarian food
+                in Lucknow.
+
+            </p>
+
+
+            <p>
+
+                Made with ❤️ for food lovers.
+
+            </p>
+
+
+        </div>
+
+
+
+        <!-- COLUMN 2 -->
+
+        <div class="footer-col">
+
+
+            <h3>
+                Quick Links
+            </h3>
+
+
+            <a href="index.html">
+                Home
+            </a>
+
+
+            <a href="menu.html">
+                Menu
+            </a>
+
+
+            <a href="about.html">
+                About
+            </a>
+
+
+            <a href="gallery.html">
+                Gallery
+            </a>
+
+
+        </div>
+
+
+
+        <!-- COLUMN 3 -->
+
+        <div class="footer-col">
+
+
+            <h3>
+                Explore
+            </h3>
+
+
+            <a href="menu.html">
+                ☕ Drinks
+            </a>
+
+
+            <a href="menu.html">
+                🍢 Starters
+            </a>
+
+
+            <a href="menu.html">
+                🍛 Main Course
+            </a>
+
+
+            <a href="menu.html">
+                🍰 Desserts
+            </a>
+
+
+        </div>
+
+
+
+        <!-- COLUMN 4 -->
+
+        <div class="footer-col">
+
+
+            <h3>
+                Contact
+            </h3>
+
+
+            <p>
+
+                📍 Shukla Vihar Colony,
+                Devpur Para
+
+            </p>
+
+
+            <p>
+
+                Near Saint Anthony
+                Public School
+
+            </p>
+
+
+            <p>
+
+                Lucknow - 226017
+
+            </p>
+
+
+            <p>
+
+                📞 7380756957
+
+            </p>
+
+
+        </div>
+
+
+    </div>
+
+
+    <div class="footer-bottom">
+
+        © 2026 Veg Food Junction.
+        All Rights Reserved.
+
+    </div>
+
+
+</footer>
+
+
+</body>
+
+</html>

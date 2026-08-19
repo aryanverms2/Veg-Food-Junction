@@ -1,0 +1,1126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Menu | Veg Food Junction</title>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+<link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display&family=Poppins:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+<style>
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+body{
+    font-family:Poppins,sans-serif;
+    background:#f7f7f2;
+    color:#222;
+}
+
+button{
+    font-family:inherit;
+    cursor:pointer;
+}
+
+.navbar{
+    height:75px;
+    background:white;
+    border-bottom:1px solid #ddd;
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+    padding:0 6%;
+    position:sticky;
+    top:0;
+    z-index:1000;
+}
+
+.logo{
+    font-size:20px;
+    font-weight:800;
+    color:#23763a;
+}
+
+.logo span{
+    color:#222;
+}
+
+nav{
+    display:flex;
+    align-items:center;
+    gap:25px;
+}
+
+nav a{
+    text-decoration:none;
+    color:#333;
+    font-size:12px;
+}
+
+nav a:hover,
+nav a.active{
+    color:#23763a;
+}
+
+.cart-btn{
+    background:#23763a;
+    color:white !important;
+    padding:11px 18px;
+    border-radius:30px;
+}
+
+.hero{
+    padding:80px 20px;
+    text-align:center;
+    color:white;
+
+    background:
+    linear-gradient(
+        rgba(10,45,22,.82),
+        rgba(10,45,22,.82)
+    ),
+    url("https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?auto=format&fit=crop&w=1800&q=80");
+
+    background-size:cover;
+    background-position:center;
+}
+
+.hero small{
+    color:#c9eca9;
+    letter-spacing:4px;
+    font-size:11px;
+}
+
+.hero h1{
+    font-family:"DM Serif Display",serif;
+    font-size:70px;
+    font-weight:400;
+    margin:10px 0;
+}
+
+.hero h1 span{
+    color:#bce79b;
+}
+
+.hero p{
+    max-width:600px;
+    margin:auto;
+    color:#dce7df;
+    font-size:13px;
+    line-height:1.8;
+}
+
+
+/* SEARCH */
+
+.search-area{
+    padding:35px 6% 10px;
+    text-align:center;
+}
+
+.search-box{
+    max-width:550px;
+    width:100%;
+    padding:15px 20px;
+    border:1px solid #ddd;
+    border-radius:40px;
+    outline:none;
+    background:white;
+    font-size:13px;
+}
+
+
+/* CATEGORIES */
+
+.categories{
+    padding:25px 6%;
+    display:flex;
+    gap:10px;
+    overflow-x:auto;
+    justify-content:center;
+}
+
+.category-btn{
+    border:1px solid #ddd;
+    background:white;
+    padding:10px 18px;
+    border-radius:30px;
+    white-space:nowrap;
+    font-size:11px;
+}
+
+.category-btn.active,
+.category-btn:hover{
+    background:#23763a;
+    color:white;
+    border-color:#23763a;
+}
+
+
+/* MENU */
+
+.menu-section{
+    padding:35px 6% 100px;
+}
+
+.category-title{
+    font-family:"DM Serif Display",serif;
+    font-size:38px;
+    font-weight:400;
+    margin:45px 0 20px;
+    color:#1d4829;
+}
+
+.menu-grid{
+    display:grid;
+    grid-template-columns:
+    repeat(4,1fr);
+    gap:20px;
+}
+
+.food-card{
+    background:white;
+    border:1px solid #e5e5df;
+    border-radius:18px;
+    padding:22px;
+    transition:.3s;
+    position:relative;
+    overflow:hidden;
+}
+
+.food-card:hover{
+    transform:translateY(-6px);
+    box-shadow:
+    0 15px 35px rgba(0,0,0,.08);
+}
+
+.food-icon{
+    height:120px;
+    border-radius:14px;
+    background:#eff5e9;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    font-size:55px;
+    margin-bottom:15px;
+}
+
+.food-card h3{
+    font-size:16px;
+    margin-bottom:6px;
+}
+
+.food-card p{
+    font-size:10px;
+    color:#888;
+    line-height:1.6;
+    min-height:34px;
+}
+
+.food-bottom{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    margin-top:15px;
+}
+
+.price{
+    color:#23763a;
+    font-weight:800;
+    font-size:15px;
+}
+
+.add-btn{
+    border:none;
+    background:#23763a;
+    color:white;
+    padding:9px 14px;
+    border-radius:20px;
+    font-size:10px;
+    font-weight:700;
+}
+
+.add-btn:hover{
+    background:#174e27;
+}
+
+
+/* CART BAR */
+
+.cart-bar{
+    position:fixed;
+    bottom:20px;
+    left:50%;
+    transform:translateX(-50%);
+    width:min(600px,90%);
+    background:#173c22;
+    color:white;
+    border-radius:50px;
+    padding:13px 20px;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    z-index:2000;
+    box-shadow:0 10px 35px rgba(0,0,0,.25);
+}
+
+.cart-info{
+    font-size:11px;
+}
+
+.cart-info strong{
+    color:#c9eca9;
+}
+
+.view-cart{
+    border:none;
+    background:#bde69c;
+    color:#173c22;
+    padding:10px 18px;
+    border-radius:25px;
+    font-size:11px;
+    font-weight:800;
+}
+
+
+/* FOOTER */
+
+footer{
+    background:#102217;
+    color:white;
+    text-align:center;
+    padding:45px 20px;
+}
+
+footer h2{
+    margin-bottom:8px;
+}
+
+footer p{
+    color:#aebbb1;
+    font-size:11px;
+    margin:7px;
+}
+
+
+/* RESPONSIVE */
+
+@media(max-width:1000px){
+
+    .menu-grid{
+        grid-template-columns:
+        repeat(3,1fr);
+    }
+
+}
+
+@media(max-width:750px){
+
+    .navbar{
+        height:auto;
+        padding:15px;
+        flex-direction:column;
+        gap:15px;
+    }
+
+    nav{
+        gap:12px;
+        flex-wrap:wrap;
+        justify-content:center;
+    }
+
+    .menu-grid{
+        grid-template-columns:
+        repeat(2,1fr);
+    }
+
+    .hero h1{
+        font-size:55px;
+    }
+
+}
+
+@media(max-width:500px){
+
+    .menu-grid{
+        grid-template-columns:1fr;
+    }
+
+    .categories{
+        justify-content:flex-start;
+    }
+
+}
+
+</style>
+</head>
+
+<body>
+
+
+<header class="navbar">
+
+    <div class="logo">
+        🌿 Veg <span>Food Junction</span>
+    </div>
+
+    <nav>
+
+        <a href="index.html">Home</a>
+
+        <a href="menu.html" class="active">
+            Menu
+        </a>
+
+        <a href="about.html">
+            About
+        </a>
+
+        <a href="gallery.html">
+            Gallery
+        </a>
+
+        <a href="contact.html">
+            Contact
+        </a>
+
+        <a href="order.html" class="cart-btn">
+            🛒 Order
+        </a>
+
+    </nav>
+
+</header>
+
+
+<section class="hero">
+
+    <small>
+        VEG FOOD JUNCTION
+    </small>
+
+    <h1>
+        Our <span>Menu</span>
+    </h1>
+
+    <p>
+        Chai se lekar coffee, patties, pastry,
+        starters, main course aur desserts tak —
+        sab kuch ek jagah.
+    </p>
+
+</section>
+
+
+<div class="search-area">
+
+    <input
+        type="text"
+        id="search"
+        class="search-box"
+        placeholder="🔍 Search food...">
+
+</div>
+
+
+<div class="categories">
+
+    <button class="category-btn active"
+            onclick="showCategory('all',this)">
+        All
+    </button>
+
+    <button class="category-btn"
+            onclick="showCategory('drinks',this)">
+        ☕ Drinks
+    </button>
+
+    <button class="category-btn"
+            onclick="showCategory('snacks',this)">
+        🥐 Snacks
+    </button>
+
+    <button class="category-btn"
+            onclick="showCategory('starter',this)">
+        🍢 Starters
+    </button>
+
+    <button class="category-btn"
+            onclick="showCategory('main',this)">
+        🍛 Main Course
+    </button>
+
+    <button class="category-btn"
+            onclick="showCategory('chinese',this)">
+        🍜 Chinese
+    </button>
+
+    <button class="category-btn"
+            onclick="showCategory('south',this)">
+        🥘 South Indian
+    </button>
+
+    <button class="category-btn"
+            onclick="showCategory('dessert',this)">
+        🍰 Desserts
+    </button>
+
+</div>
+
+
+<section class="menu-section">
+
+    <div class="menu-grid" id="menuGrid"></div>
+
+</section>
+
+
+<div class="cart-bar">
+
+    <div class="cart-info">
+
+        🛒 Cart:
+        <strong id="cartCount">
+            0 items
+        </strong>
+
+        &nbsp; | &nbsp;
+
+        Total:
+        <strong id="cartTotal">
+            ₹0
+        </strong>
+
+    </div>
+
+    <button
+        class="view-cart"
+        onclick="goToOrder()">
+
+        View Cart →
+
+    </button>
+
+</div>
+
+
+<footer>
+
+    <h2>
+        🌿 Veg Food Junction
+    </h2>
+
+    <p>
+        Fresh • Healthy • Delicious • 100% Vegetarian
+    </p>
+
+    <p>
+        📍 Shukla Vihar Colony, Devpur Para,
+        Near Saint Anthony Public School,
+        Lucknow - 226017
+    </p>
+
+    <p>
+        📞 7380756957
+    </p>
+
+    <p>
+        © 2026 Veg Food Junction
+    </p>
+
+</footer>
+
+
+<script>
+
+/* =====================================================
+   FOOD DATABASE
+===================================================== */
+
+const foods = [
+
+    /* DRINKS */
+
+    {
+        name:"Masala Chai",
+        price:30,
+        category:"drinks",
+        icon:"☕",
+        desc:"Hot Indian masala tea"
+    },
+
+    {
+        name:"Ginger Tea",
+        price:35,
+        category:"drinks",
+        icon:"🍵",
+        desc:"Fresh ginger wali chai"
+    },
+
+    {
+        name:"Elaichi Tea",
+        price:35,
+        category:"drinks",
+        icon:"☕",
+        desc:"Cardamom flavoured tea"
+    },
+
+    {
+        name:"Cold Coffee",
+        price:90,
+        category:"drinks",
+        icon:"🥤",
+        desc:"Creamy chilled coffee"
+    },
+
+    {
+        name:"Hot Coffee",
+        price:70,
+        category:"drinks",
+        icon:"☕",
+        desc:"Fresh hot coffee"
+    },
+
+    {
+        name:"Lemon Tea",
+        price:40,
+        category:"drinks",
+        icon:"🍋",
+        desc:"Refreshing lemon tea"
+    },
+
+
+    /* SNACKS */
+
+    {
+        name:"Veg Patties",
+        price:40,
+        category:"snacks",
+        icon:"🥐",
+        desc:"Crispy vegetable patties"
+    },
+
+    {
+        name:"Paneer Patties",
+        price:60,
+        category:"snacks",
+        icon:"🥟",
+        desc:"Paneer filled crispy patties"
+    },
+
+    {
+        name:"Veg Sandwich",
+        price:80,
+        category:"snacks",
+        icon:"🥪",
+        desc:"Fresh vegetable sandwich"
+    },
+
+    {
+        name:"Cheese Sandwich",
+        price:110,
+        category:"snacks",
+        icon:"🥪",
+        desc:"Cheesy grilled sandwich"
+    },
+
+
+    /* STARTERS */
+
+    {
+        name:"Paneer Tikka",
+        price:180,
+        category:"starter",
+        icon:"🍢",
+        desc:"Grilled spicy paneer tikka"
+    },
+
+    {
+        name:"Hara Bhara Kebab",
+        price:150,
+        category:"starter",
+        icon:"🥙",
+        desc:"Healthy green vegetable kebab"
+    },
+
+    {
+        name:"Veg Spring Roll",
+        price:130,
+        category:"starter",
+        icon:"🌯",
+        desc:"Crispy vegetable spring rolls"
+    },
+
+    {
+        name:"Chilli Paneer",
+        price:190,
+        category:"starter",
+        icon:"🌶️",
+        desc:"Spicy chilli paneer"
+    },
+
+
+    /* MAIN COURSE */
+
+    {
+        name:"Paneer Butter Masala",
+        price:220,
+        category:"main",
+        icon:"🍛",
+        desc:"Rich creamy paneer gravy"
+    },
+
+    {
+        name:"Shahi Paneer",
+        price:230,
+        category:"main",
+        icon:"🍛",
+        desc:"Royal creamy paneer curry"
+    },
+
+    {
+        name:"Dal Tadka",
+        price:150,
+        category:"main",
+        icon:"🥣",
+        desc:"Yellow dal with tadka"
+    },
+
+    {
+        name:"Mix Veg",
+        price:170,
+        category:"main",
+        icon:"🥘",
+        desc:"Fresh mixed vegetables"
+    },
+
+    {
+        name:"Veg Thali",
+        price:280,
+        category:"main",
+        icon:"🍱",
+        desc:"Complete vegetarian thali"
+    },
+
+    {
+        name:"Paneer Thali",
+        price:320,
+        category:"main",
+        icon:"🍱",
+        desc:"Special paneer thali"
+    },
+
+
+    /* CHINESE */
+
+    {
+        name:"Veg Hakka Noodles",
+        price:150,
+        category:"chinese",
+        icon:"🍜",
+        desc:"Chinese style veg noodles"
+    },
+
+    {
+        name:"Veg Fried Rice",
+        price:150,
+        category:"chinese",
+        icon:"🍚",
+        desc:"Fresh vegetable fried rice"
+    },
+
+    {
+        name:"Chilli Potato",
+        price:140,
+        category:"chinese",
+        icon:"🥔",
+        desc:"Crispy spicy chilli potato"
+    },
+
+    {
+        name:"Veg Manchurian",
+        price:160,
+        category:"chinese",
+        icon:"🥢",
+        desc:"Classic veg manchurian"
+    },
+
+
+    /* SOUTH INDIAN */
+
+    {
+        name:"Masala Dosa",
+        price:120,
+        category:"south",
+        icon:"🥞",
+        desc:"Crispy dosa with masala"
+    },
+
+    {
+        name:"Idli Sambhar",
+        price:100,
+        category:"south",
+        icon:"🥘",
+        desc:"Soft idli with sambhar"
+    },
+
+    {
+        name:"Vada Sambhar",
+        price:100,
+        category:"south",
+        icon:"🍩",
+        desc:"Crispy vada with sambhar"
+    },
+
+    {
+        name:"Plain Dosa",
+        price:90,
+        category:"south",
+        icon:"🥞",
+        desc:"Classic crispy dosa"
+    },
+
+
+    /* DESSERT */
+
+    {
+        name:"Chocolate Pastry",
+        price:80,
+        category:"dessert",
+        icon:"🍰",
+        desc:"Soft chocolate pastry"
+    },
+
+    {
+        name:"Black Forest Pastry",
+        price:90,
+        category:"dessert",
+        icon:"🍰",
+        desc:"Classic black forest"
+    },
+
+    {
+        name:"Gulab Jamun",
+        price:70,
+        category:"dessert",
+        icon:"🍩",
+        desc:"Soft hot gulab jamun"
+    },
+
+    {
+        name:"Ice Cream",
+        price:80,
+        category:"dessert",
+        icon:"🍨",
+        desc:"Chilled creamy ice cream"
+    }
+
+];
+
+
+/* =====================================================
+   CART
+===================================================== */
+
+let cart =
+    JSON.parse(
+        localStorage.getItem("vegFoodCart")
+    ) || [];
+
+
+/* =====================================================
+   DISPLAY MENU
+===================================================== */
+
+function displayMenu(category="all",searchText=""){
+
+    const grid =
+        document.getElementById("menuGrid");
+
+    grid.innerHTML="";
+
+
+    const filtered =
+        foods.filter(food=>{
+
+            const categoryMatch =
+                category === "all" ||
+                food.category === category;
+
+
+            const searchMatch =
+                food.name
+                .toLowerCase()
+                .includes(
+                    searchText.toLowerCase()
+                );
+
+
+            return categoryMatch && searchMatch;
+
+        });
+
+
+    if(filtered.length===0){
+
+        grid.innerHTML=`
+
+            <div style="
+                grid-column:1/-1;
+                text-align:center;
+                padding:50px;
+                color:#888;
+            ">
+
+                😕 Food nahi mila.
+
+            </div>
+
+        `;
+
+        return;
+
+    }
+
+
+    filtered.forEach(food=>{
+
+        grid.innerHTML += `
+
+            <div class="food-card">
+
+                <div class="food-icon">
+                    ${food.icon}
+                </div>
+
+                <h3>
+                    ${food.name}
+                </h3>
+
+                <p>
+                    ${food.desc}
+                </p>
+
+                <div class="food-bottom">
+
+                    <span class="price">
+                        ₹${food.price}
+                    </span>
+
+                    <button
+                        class="add-btn"
+                        onclick="
+                        addToCart(
+                            '${food.name}',
+                            ${food.price}
+                        )
+                        ">
+
+                        + Add
+
+                    </button>
+
+                </div>
+
+            </div>
+
+        `;
+
+    });
+
+}
+
+
+/* =====================================================
+   ADD TO CART
+===================================================== */
+
+function addToCart(name,price){
+
+    const existing =
+        cart.find(
+            item => item.name === name
+        );
+
+
+    if(existing){
+
+        existing.quantity++;
+
+    }
+    else{
+
+        cart.push({
+
+            name:name,
+            price:price,
+            quantity:1
+
+        });
+
+    }
+
+
+    saveCart();
+
+
+    alert(
+        name +
+        " cart mein add ho gaya 🛒"
+    );
+
+}
+
+
+/* =====================================================
+   SAVE CART
+===================================================== */
+
+function saveCart(){
+
+    localStorage.setItem(
+        "vegFoodCart",
+        JSON.stringify(cart)
+    );
+
+
+    updateCartBar();
+
+}
+
+
+/* =====================================================
+   CART BAR
+===================================================== */
+
+function updateCartBar(){
+
+    let count=0;
+    let total=0;
+
+
+    cart.forEach(item=>{
+
+        count += item.quantity;
+
+        total +=
+            item.price *
+            item.quantity;
+
+    });
+
+
+    document
+        .getElementById("cartCount")
+        .innerText =
+        count + " items";
+
+
+    document
+        .getElementById("cartTotal")
+        .innerText =
+        "₹" + total;
+
+}
+
+
+/* =====================================================
+   CATEGORY
+===================================================== */
+
+let currentCategory="all";
+
+
+function showCategory(category,button){
+
+    currentCategory=category;
+
+
+    document
+        .querySelectorAll(".category-btn")
+        .forEach(btn=>{
+
+            btn.classList.remove("active");
+
+        });
+
+
+    button.classList.add("active");
+
+
+    const search =
+        document
+        .getElementById("search")
+        .value;
+
+
+    displayMenu(
+        category,
+        search
+    );
+
+}
+
+
+/* =====================================================
+   SEARCH
+===================================================== */
+
+document
+    .getElementById("search")
+    .addEventListener(
+        "input",
+        function(){
+
+            displayMenu(
+                currentCategory,
+                this.value
+            );
+
+        }
+    );
+
+
+/* =====================================================
+   GO TO ORDER
+===================================================== */
+
+function goToOrder(){
+
+    if(cart.length===0){
+
+        alert(
+            "Pehle menu se food add karo 🛒"
+        );
+
+        return;
+
+    }
+
+
+    window.location.href =
+        "order.html";
+
+}
+
+
+/* =====================================================
+   INITIAL
+===================================================== */
+
+displayMenu();
+
+updateCartBar();
+
+</script>
+
+</body>
+</html>

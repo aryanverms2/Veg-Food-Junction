@@ -1,0 +1,2229 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+
+    <title>Order Now | Veg Food Junction</title>
+
+
+    <!-- GOOGLE FONT -->
+
+    <link rel="preconnect"
+          href="https://fonts.googleapis.com">
+
+    <link rel="preconnect"
+          href="https://fonts.gstatic.com"
+          crossorigin>
+
+    <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display&family=Poppins:wght@400;500;600;700;800&display=swap"
+          rel="stylesheet">
+
+
+<style>
+
+/* =====================================================
+   RESET
+===================================================== */
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+
+html{
+    scroll-behavior:smooth;
+}
+
+
+body{
+
+    font-family:"Poppins",sans-serif;
+
+    background:#f6f7f2;
+
+    color:#222;
+
+}
+
+
+button,
+input,
+textarea,
+select{
+
+    font-family:inherit;
+
+}
+
+
+button{
+
+    cursor:pointer;
+
+}
+
+
+a{
+
+    text-decoration:none;
+
+}
+
+
+/* =====================================================
+   NAVBAR
+===================================================== */
+
+.navbar{
+
+    min-height:75px;
+
+    padding:15px 6%;
+
+    background:white;
+
+    display:flex;
+
+    align-items:center;
+
+    justify-content:space-between;
+
+    border-bottom:1px solid #ddd;
+
+    position:sticky;
+
+    top:0;
+
+    z-index:1000;
+
+}
+
+
+.logo{
+
+    color:#23763a;
+
+    font-size:20px;
+
+    font-weight:800;
+
+}
+
+
+.logo span{
+
+    color:#222;
+
+}
+
+
+nav{
+
+    display:flex;
+
+    align-items:center;
+
+    gap:24px;
+
+}
+
+
+nav a{
+
+    color:#333;
+
+    font-size:12px;
+
+    font-weight:500;
+
+}
+
+
+nav a:hover,
+nav a.active{
+
+    color:#23763a;
+
+}
+
+
+.order-link{
+
+    background:#23763a;
+
+    color:white !important;
+
+    padding:10px 18px;
+
+    border-radius:30px;
+
+}
+
+
+/* =====================================================
+   HERO
+===================================================== */
+
+.hero{
+
+    min-height:350px;
+
+    display:flex;
+
+    align-items:center;
+
+    justify-content:center;
+
+    text-align:center;
+
+    color:white;
+
+    padding:60px 20px;
+
+    background:
+
+    linear-gradient(
+
+        rgba(13,54,27,.83),
+
+        rgba(13,54,27,.83)
+
+    ),
+
+    url("https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?auto=format&fit=crop&w=1800&q=85");
+
+    background-size:cover;
+
+    background-position:center;
+
+}
+
+
+.hero small{
+
+    color:#c5e8a5;
+
+    font-size:11px;
+
+    letter-spacing:4px;
+
+    font-weight:700;
+
+}
+
+
+.hero h1{
+
+    font-family:"DM Serif Display",serif;
+
+    font-weight:400;
+
+    font-size:clamp(55px,8vw,80px);
+
+    line-height:1;
+
+    margin:12px 0;
+
+}
+
+
+.hero h1 span{
+
+    color:#bde69c;
+
+}
+
+
+.hero p{
+
+    color:#dce7df;
+
+    font-size:13px;
+
+}
+
+
+/* =====================================================
+   MAIN
+===================================================== */
+
+.order-section{
+
+    padding:65px 5% 100px;
+
+}
+
+
+.order-container{
+
+    max-width:1150px;
+
+    margin:auto;
+
+    display:grid;
+
+    grid-template-columns:
+
+    1fr 1fr;
+
+    gap:25px;
+
+}
+
+
+/* =====================================================
+   BOX
+===================================================== */
+
+.box{
+
+    background:white;
+
+    border:1px solid #e2e3dc;
+
+    border-radius:20px;
+
+    padding:28px;
+
+    box-shadow:
+
+    0 10px 35px rgba(0,0,0,.05);
+
+}
+
+
+.box-title{
+
+    display:flex;
+
+    align-items:center;
+
+    gap:12px;
+
+    margin-bottom:25px;
+
+}
+
+
+.number{
+
+    width:36px;
+
+    height:36px;
+
+    border-radius:50%;
+
+    display:flex;
+
+    align-items:center;
+
+    justify-content:center;
+
+    background:#23763a;
+
+    color:white;
+
+    font-weight:700;
+
+    font-size:13px;
+
+}
+
+
+.box-title h2{
+
+    font-family:"DM Serif Display",serif;
+
+    font-weight:400;
+
+    font-size:30px;
+
+    color:#1d4829;
+
+}
+
+
+/* =====================================================
+   FORM
+===================================================== */
+
+.form-group{
+
+    margin-bottom:17px;
+
+}
+
+
+.form-group label{
+
+    display:block;
+
+    margin-bottom:7px;
+
+    font-size:11px;
+
+    font-weight:600;
+
+    color:#555;
+
+}
+
+
+.form-group input,
+.form-group textarea,
+.form-group select{
+
+    width:100%;
+
+    border:1px solid #dedfd8;
+
+    background:#fafaf7;
+
+    border-radius:10px;
+
+    padding:13px 14px;
+
+    outline:none;
+
+    font-size:12px;
+
+    color:#333;
+
+    transition:.3s;
+
+}
+
+
+.form-group input:focus,
+.form-group textarea:focus,
+.form-group select:focus{
+
+    border-color:#23763a;
+
+    background:white;
+
+    box-shadow:
+
+    0 0 0 3px rgba(35,118,58,.08);
+
+}
+
+
+.form-group textarea{
+
+    height:95px;
+
+    resize:none;
+
+}
+
+
+.two-input{
+
+    display:grid;
+
+    grid-template-columns:
+
+    1fr 1fr;
+
+    gap:15px;
+
+}
+
+
+/* =====================================================
+   CART
+===================================================== */
+
+.cart-item{
+
+    display:flex;
+
+    align-items:center;
+
+    justify-content:space-between;
+
+    gap:15px;
+
+    padding:16px 0;
+
+    border-bottom:1px solid #eeeeea;
+
+}
+
+
+.item-name{
+
+    font-size:13px;
+
+    font-weight:700;
+
+    color:#222;
+
+}
+
+
+.item-price{
+
+    color:#23763a;
+
+    font-size:14px;
+
+    font-weight:800;
+
+}
+
+
+.item-info{
+
+    font-size:10px;
+
+    color:#999;
+
+    margin-top:3px;
+
+}
+
+
+/* =====================================================
+   QUANTITY
+===================================================== */
+
+.qty{
+
+    display:flex;
+
+    align-items:center;
+
+    gap:9px;
+
+    margin-top:8px;
+
+}
+
+
+.qty button{
+
+    width:27px;
+
+    height:27px;
+
+    border:none;
+
+    border-radius:50%;
+
+    background:#23763a;
+
+    color:white;
+
+    font-size:16px;
+
+    line-height:1;
+
+}
+
+
+.qty button:hover{
+
+    background:#174f27;
+
+}
+
+
+.qty span{
+
+    min-width:20px;
+
+    text-align:center;
+
+    font-size:12px;
+
+    font-weight:700;
+
+}
+
+
+/* =====================================================
+   REMOVE
+===================================================== */
+
+.remove-btn{
+
+    border:none;
+
+    background:#ffeded;
+
+    color:#d43b3b;
+
+    padding:5px 9px;
+
+    border-radius:8px;
+
+    font-size:9px;
+
+    margin-top:7px;
+
+}
+
+
+.remove-btn:hover{
+
+    background:#ffdcdc;
+
+}
+
+
+/* =====================================================
+   EMPTY
+===================================================== */
+
+.empty-cart{
+
+    text-align:center;
+
+    padding:40px 10px;
+
+    color:#888;
+
+}
+
+
+.empty-cart .empty-icon{
+
+    font-size:50px;
+
+    margin-bottom:10px;
+
+}
+
+
+.empty-cart p{
+
+    font-size:12px;
+
+}
+
+
+.menu-btn{
+
+    display:inline-block;
+
+    margin-top:15px;
+
+    padding:10px 20px;
+
+    background:#23763a;
+
+    color:white;
+
+    border-radius:25px;
+
+    font-size:11px;
+
+}
+
+
+/* =====================================================
+   TOTAL
+===================================================== */
+
+.total-box{
+
+    margin-top:20px;
+
+    border-top:1px solid #ddd;
+
+    padding-top:18px;
+
+}
+
+
+.total-row{
+
+    display:flex;
+
+    align-items:center;
+
+    justify-content:space-between;
+
+    margin:9px 0;
+
+    font-size:12px;
+
+    color:#666;
+
+}
+
+
+.total-row strong{
+
+    color:#333;
+
+}
+
+
+.total-row.grand{
+
+    margin-top:18px;
+
+    padding-top:15px;
+
+    border-top:1px dashed #ddd;
+
+    font-size:20px;
+
+    font-weight:800;
+
+}
+
+
+.total-row.grand span,
+.total-row.grand strong{
+
+    color:#23763a;
+
+}
+
+
+/* =====================================================
+   PAYMENT
+===================================================== */
+
+.payment-text{
+
+    text-align:center;
+
+    color:#888;
+
+    font-size:11px;
+
+    line-height:1.7;
+
+}
+
+
+.qr-wrapper{
+
+    width:235px;
+
+    height:235px;
+
+    padding:10px;
+
+    margin:20px auto;
+
+    background:white;
+
+    border-radius:15px;
+
+    border:1px solid #ddd;
+
+    box-shadow:
+
+    0 8px 25px rgba(0,0,0,.08);
+
+}
+
+
+.qr-wrapper img{
+
+    width:100%;
+
+    height:100%;
+
+    object-fit:contain;
+
+}
+
+
+.upi-box{
+
+    text-align:center;
+
+    background:#eff7eb;
+
+    border:1px dashed #b8d5ae;
+
+    padding:13px;
+
+    border-radius:10px;
+
+    margin-bottom:20px;
+
+}
+
+
+.upi-box span{
+
+    display:block;
+
+    font-size:9px;
+
+    color:#777;
+
+}
+
+
+.upi-box strong{
+
+    color:#23763a;
+
+    font-size:13px;
+
+}
+
+
+/* =====================================================
+   BUTTONS
+===================================================== */
+
+.confirm-btn{
+
+    width:100%;
+
+    border:none;
+
+    background:#23763a;
+
+    color:white;
+
+    padding:15px;
+
+    border-radius:30px;
+
+    font-size:12px;
+
+    font-weight:700;
+
+    transition:.3s;
+
+}
+
+
+.confirm-btn:hover{
+
+    background:#174f27;
+
+    transform:translateY(-2px);
+
+}
+
+
+.whatsapp-btn{
+
+    width:100%;
+
+    border:none;
+
+    background:#25d366;
+
+    color:white;
+
+    padding:14px;
+
+    border-radius:30px;
+
+    font-size:12px;
+
+    font-weight:700;
+
+    margin-top:10px;
+
+}
+
+
+.whatsapp-btn:hover{
+
+    background:#1fbd5a;
+
+}
+
+
+/* =====================================================
+   SUCCESS POPUP
+===================================================== */
+
+.success-overlay{
+
+    position:fixed;
+
+    inset:0;
+
+    background:rgba(0,0,0,.6);
+
+    display:none;
+
+    align-items:center;
+
+    justify-content:center;
+
+    z-index:5000;
+
+    padding:20px;
+
+}
+
+
+.success-overlay.show{
+
+    display:flex;
+
+}
+
+
+.success-box{
+
+    width:100%;
+
+    max-width:430px;
+
+    background:white;
+
+    border-radius:25px;
+
+    padding:40px 30px;
+
+    text-align:center;
+
+    animation:popup .3s ease;
+
+}
+
+
+@keyframes popup{
+
+    from{
+
+        transform:scale(.8);
+
+        opacity:0;
+
+    }
+
+    to{
+
+        transform:scale(1);
+
+        opacity:1;
+
+    }
+
+}
+
+
+.success-icon{
+
+    width:70px;
+
+    height:70px;
+
+    margin:0 auto 15px;
+
+    border-radius:50%;
+
+    background:#e8f6e2;
+
+    display:flex;
+
+    align-items:center;
+
+    justify-content:center;
+
+    font-size:35px;
+
+}
+
+
+.success-box h2{
+
+    font-family:"DM Serif Display",serif;
+
+    font-size:34px;
+
+    color:#23763a;
+
+    font-weight:400;
+
+}
+
+
+.success-box p{
+
+    color:#777;
+
+    font-size:12px;
+
+    line-height:1.8;
+
+    margin:10px 0 25px;
+
+}
+
+
+.close-btn{
+
+    border:none;
+
+    background:#23763a;
+
+    color:white;
+
+    padding:11px 25px;
+
+    border-radius:25px;
+
+}
+
+
+/* =====================================================
+   FOOTER
+===================================================== */
+
+footer{
+
+    background:#102217;
+
+    color:white;
+
+    text-align:center;
+
+    padding:45px 20px;
+
+}
+
+
+footer h2{
+
+    margin-bottom:8px;
+
+}
+
+
+footer p{
+
+    color:#aebbb1;
+
+    font-size:11px;
+
+    margin:7px;
+
+}
+
+
+/* =====================================================
+   RESPONSIVE
+===================================================== */
+
+@media(max-width:850px){
+
+    .navbar{
+
+        flex-direction:column;
+
+        gap:15px;
+
+    }
+
+
+    nav{
+
+        flex-wrap:wrap;
+
+        justify-content:center;
+
+    }
+
+
+    .order-container{
+
+        grid-template-columns:1fr;
+
+    }
+
+}
+
+
+@media(max-width:550px){
+
+    .two-input{
+
+        grid-template-columns:1fr;
+
+        gap:0;
+
+    }
+
+
+    .box{
+
+        padding:20px;
+
+    }
+
+
+    .qr-wrapper{
+
+        width:210px;
+
+        height:210px;
+
+    }
+
+}
+
+</style>
+
+</head>
+
+
+<body>
+
+
+<!-- =====================================================
+     NAVBAR
+===================================================== -->
+
+<header class="navbar">
+
+
+    <div class="logo">
+
+        🌿 Veg <span>Food Junction</span>
+
+    </div>
+
+
+    <nav>
+
+        <a href="index.html">
+            Home
+        </a>
+
+        <a href="menu.html">
+            Menu
+        </a>
+
+        <a href="about.html">
+            About
+        </a>
+
+        <a href="gallery.html">
+            Gallery
+        </a>
+
+        <a href="contact.html">
+            Contact
+        </a>
+
+        <a href="order.html"
+           class="order-link active">
+
+            🛒 Order
+
+        </a>
+
+    </nav>
+
+</header>
+
+
+
+<!-- =====================================================
+     HERO
+===================================================== -->
+
+<section class="hero">
+
+    <div>
+
+        <small>
+            VEG FOOD JUNCTION
+        </small>
+
+        <h1>
+
+            Your <span>Order</span>
+
+        </h1>
+
+        <p>
+
+            Review your selected items and place your order.
+
+        </p>
+
+    </div>
+
+</section>
+
+
+
+<!-- =====================================================
+     ORDER SECTION
+===================================================== -->
+
+<section class="order-section">
+
+
+<div class="order-container">
+
+
+    <!-- =================================================
+         CUSTOMER DETAILS
+    ================================================== -->
+
+    <div class="box">
+
+
+        <div class="box-title">
+
+            <div class="number">
+                1
+            </div>
+
+            <h2>
+                Customer Details
+            </h2>
+
+        </div>
+
+
+        <div class="two-input">
+
+
+            <div class="form-group">
+
+                <label>
+                    Full Name *
+                </label>
+
+                <input
+                    type="text"
+                    id="customerName"
+                    placeholder="Enter your name">
+
+            </div>
+
+
+            <div class="form-group">
+
+                <label>
+                    Mobile Number *
+                </label>
+
+                <input
+                    type="tel"
+                    id="customerPhone"
+                    maxlength="10"
+                    placeholder="10 digit mobile number">
+
+            </div>
+
+
+        </div>
+
+
+        <div class="form-group">
+
+            <label>
+                Order Type
+            </label>
+
+            <select id="orderType">
+
+                <option value="Delivery">
+
+                    🛵 Home Delivery
+
+                </option>
+
+                <option value="Pickup">
+
+                    🛍️ Self Pickup
+
+                </option>
+
+            </select>
+
+        </div>
+
+
+        <div class="form-group">
+
+            <label>
+                Address *
+            </label>
+
+            <textarea
+                id="customerAddress"
+                placeholder="Enter complete address"></textarea>
+
+        </div>
+
+
+        <div class="form-group">
+
+            <label>
+                Special Instructions
+            </label>
+
+            <textarea
+                id="instructions"
+                placeholder="Less spicy, extra sauce etc."></textarea>
+
+        </div>
+
+
+    </div>
+
+
+
+    <!-- =================================================
+         CART
+    ================================================== -->
+
+    <div class="box">
+
+
+        <div class="box-title">
+
+            <div class="number">
+                2
+            </div>
+
+            <h2>
+                Your Items
+            </h2>
+
+        </div>
+
+
+        <div id="cartItems">
+
+            <!-- JS WILL ADD ITEMS -->
+
+        </div>
+
+
+        <!-- TOTAL -->
+
+        <div class="total-box">
+
+
+            <div class="total-row">
+
+                <span>
+                    Subtotal
+                </span>
+
+                <strong id="subtotal">
+                    ₹0
+                </strong>
+
+            </div>
+
+
+            <div class="total-row">
+
+                <span>
+                    Delivery Charge
+                </span>
+
+                <strong id="delivery">
+                    ₹0
+                </strong>
+
+            </div>
+
+
+            <div class="total-row grand">
+
+                <span>
+                    Grand Total
+                </span>
+
+                <strong id="total">
+                    ₹0
+                </strong>
+
+            </div>
+
+
+        </div>
+
+
+    </div>
+
+
+
+    <!-- =================================================
+         PAYMENT
+    ================================================== -->
+
+    <div class="box">
+
+
+        <div class="box-title">
+
+            <div class="number">
+                3
+            </div>
+
+            <h2>
+                UPI Payment
+            </h2>
+
+        </div>
+
+
+        <p class="payment-text">
+
+            QR code scan karke payment karein.
+
+            <br>
+
+            Payment ke baad Confirm Order karein.
+
+        </p>
+
+
+        <div class="qr-wrapper">
+
+            <!-- APNI QR IMAGE YAHAN RAKHO -->
+
+            <img
+                src="qr code.jpeg"
+                alt="Veg Food Junction UPI QR Code">
+
+        </div>
+
+
+        <div class="upi-box">
+
+            <span>
+                UPI ID
+            </span>
+
+            <strong>
+                7380756957@ptyes
+            </strong>
+
+        </div>
+
+
+        <button
+            class="confirm-btn"
+            onclick="placeOrder()">
+
+            ✅ Confirm Order
+
+        </button>
+
+
+        <button
+            class="whatsapp-btn"
+            onclick="sendWhatsApp()">
+
+            💬 Send Order On WhatsApp
+
+        </button>
+
+
+    </div>
+
+
+</div>
+
+</section>
+
+
+
+<!-- =====================================================
+     SUCCESS POPUP
+===================================================== -->
+
+<div
+    class="success-overlay"
+    id="successOverlay">
+
+
+    <div class="success-box">
+
+
+        <div class="success-icon">
+
+            ✅
+
+        </div>
+
+
+        <h2>
+
+            Order Received!
+
+        </h2>
+
+
+        <p>
+
+            Thank you for ordering from
+            <strong>Veg Food Junction</strong>.
+
+            <br>
+
+            Your order has been received.
+
+        </p>
+
+
+        <button
+            class="close-btn"
+            onclick="closeSuccess()">
+
+            Done
+
+        </button>
+
+
+    </div>
+
+</div>
+
+
+
+<!-- =====================================================
+     FOOTER
+===================================================== -->
+
+<footer>
+
+    <h2>
+        🌿 Veg Food Junction
+    </h2>
+
+
+    <p>
+        Fresh • Healthy • Delicious • 100% Vegetarian
+    </p>
+
+
+    <p>
+
+        📍 Shukla Vihar Colony,
+        Devpur Para,
+        Near Saint Anthony Public School,
+        Lucknow - 226017
+
+    </p>
+
+
+    <p>
+        📞 7380756957
+    </p>
+
+
+    <p>
+        © 2026 Veg Food Junction
+    </p>
+
+</footer>
+
+
+
+<script>
+
+/* =====================================================
+   LOAD CART FROM MENU
+===================================================== */
+
+let cart =
+    JSON.parse(
+        localStorage.getItem("vegFoodCart")
+    ) || [];
+
+
+/* =====================================================
+   DISPLAY CART
+===================================================== */
+
+function displayCart(){
+
+    const container =
+        document.getElementById("cartItems");
+
+
+    container.innerHTML = "";
+
+
+    /* EMPTY CART */
+
+    if(cart.length === 0){
+
+        container.innerHTML = `
+
+            <div class="empty-cart">
+
+                <div class="empty-icon">
+                    🛒
+                </div>
+
+                <p>
+                    Your cart is empty.
+                </p>
+
+                <a
+                    href="menu.html"
+                    class="menu-btn">
+
+                    Go To Menu
+
+                </a>
+
+            </div>
+
+        `;
+
+
+        calculateTotal();
+
+        return;
+
+    }
+
+
+    /* SHOW ITEMS */
+
+    cart.forEach(
+        function(item,index){
+
+            const price =
+                Number(item.price);
+
+
+            const quantity =
+                Number(item.quantity);
+
+
+            const itemTotal =
+                price * quantity;
+
+
+            container.innerHTML += `
+
+                <div class="cart-item">
+
+
+                    <div>
+
+                        <div class="item-name">
+
+                            ${item.name}
+
+                        </div>
+
+
+                        <div class="item-info">
+
+                            ₹${price} × ${quantity}
+
+                        </div>
+
+
+                        <div class="qty">
+
+
+                            <button
+                                onclick="
+                                changeQuantity(
+                                    ${index},
+                                    -1
+                                )">
+
+                                −
+
+                            </button>
+
+
+                            <span>
+
+                                ${quantity}
+
+                            </span>
+
+
+                            <button
+                                onclick="
+                                changeQuantity(
+                                    ${index},
+                                    1
+                                )">
+
+                                +
+
+                            </button>
+
+
+                        </div>
+
+                    </div>
+
+
+                    <div
+                        style="
+                        text-align:right;
+                        ">
+
+
+                        <div class="item-price">
+
+                            ₹${itemTotal}
+
+                        </div>
+
+
+                        <button
+                            class="remove-btn"
+                            onclick="
+                            removeItem(
+                                ${index}
+                            )">
+
+                            Remove
+
+                        </button>
+
+
+                    </div>
+
+
+                </div>
+
+            `;
+
+        }
+    );
+
+
+    calculateTotal();
+
+}
+
+
+/* =====================================================
+   CHANGE QUANTITY
+===================================================== */
+
+function changeQuantity(index,change){
+
+    cart[index].quantity =
+        Number(cart[index].quantity) +
+        Number(change);
+
+
+    if(cart[index].quantity <= 0){
+
+        cart.splice(index,1);
+
+    }
+
+
+    saveCart();
+
+}
+
+
+/* =====================================================
+   REMOVE ITEM
+===================================================== */
+
+function removeItem(index){
+
+    cart.splice(index,1);
+
+    saveCart();
+
+}
+
+
+/* =====================================================
+   SAVE CART
+===================================================== */
+
+function saveCart(){
+
+    localStorage.setItem(
+        "vegFoodCart",
+        JSON.stringify(cart)
+    );
+
+
+    displayCart();
+
+}
+
+
+/* =====================================================
+   CALCULATE TOTAL
+===================================================== */
+
+function calculateTotal(){
+
+    let subtotal = 0;
+
+
+    /*
+       हर item:
+       price × quantity
+    */
+
+    for(
+        let i = 0;
+        i < cart.length;
+        i++
+    ){
+
+        const price =
+            Number(cart[i].price);
+
+
+        const quantity =
+            Number(cart[i].quantity);
+
+
+        subtotal +=
+            price * quantity;
+
+    }
+
+
+    /* DELIVERY */
+
+    let deliveryCharge = 0;
+
+
+    const orderType =
+        document
+        .getElementById("orderType")
+        .value;
+
+
+    if(
+        orderType === "Delivery"
+        &&
+        subtotal > 0
+    ){
+
+        deliveryCharge = 30;
+
+    }
+
+
+    /* GRAND TOTAL */
+
+    const grandTotal =
+        subtotal +
+        deliveryCharge;
+
+
+    /* SHOW VALUES */
+
+    document
+        .getElementById("subtotal")
+        .innerText =
+        "₹" + subtotal;
+
+
+    document
+        .getElementById("delivery")
+        .innerText =
+        "₹" + deliveryCharge;
+
+
+    document
+        .getElementById("total")
+        .innerText =
+        "₹" + grandTotal;
+
+}
+
+
+/* =====================================================
+   DELIVERY CHANGE
+===================================================== */
+
+document
+    .getElementById("orderType")
+    .addEventListener(
+        "change",
+        function(){
+
+            calculateTotal();
+
+        }
+    );
+
+
+/* =====================================================
+   GET GRAND TOTAL
+===================================================== */
+
+function getGrandTotal(){
+
+    let subtotal = 0;
+
+
+    cart.forEach(
+        function(item){
+
+            subtotal +=
+                Number(item.price) *
+                Number(item.quantity);
+
+        }
+    );
+
+
+    const type =
+        document
+        .getElementById("orderType")
+        .value;
+
+
+    let delivery = 0;
+
+
+    if(
+        type === "Delivery"
+        &&
+        subtotal > 0
+    ){
+
+        delivery = 30;
+
+    }
+
+
+    return subtotal + delivery;
+
+}
+
+
+/* =====================================================
+   VALIDATE FORM
+===================================================== */
+
+function validateForm(){
+
+    if(cart.length === 0){
+
+        alert(
+            "Cart empty hai. Pehle menu se food select karo."
+        );
+
+        return false;
+
+    }
+
+
+    const name =
+        document
+        .getElementById("customerName")
+        .value
+        .trim();
+
+
+    const phone =
+        document
+        .getElementById("customerPhone")
+        .value
+        .trim();
+
+
+    const address =
+        document
+        .getElementById("customerAddress")
+        .value
+        .trim();
+
+
+    if(name === ""){
+
+        alert(
+            "Please enter your name."
+        );
+
+        return false;
+
+    }
+
+
+    if(
+        !/^[0-9]{10}$/.test(phone)
+    ){
+
+        alert(
+            "Please enter a valid 10 digit mobile number."
+        );
+
+        return false;
+
+    }
+
+
+    if(address === ""){
+
+        alert(
+            "Please enter your address."
+        );
+
+        return false;
+
+    }
+
+
+    return true;
+
+}
+
+
+/* =====================================================
+   PLACE ORDER
+===================================================== */
+
+function placeOrder(){
+
+    if(!validateForm()){
+
+        return;
+
+    }
+
+
+    const total =
+        getGrandTotal();
+
+
+    console.log(
+        "Order Total:",
+        total
+    );
+
+
+    document
+        .getElementById(
+            "successOverlay"
+        )
+        .classList
+        .add("show");
+
+}
+
+
+/* =====================================================
+   CLOSE SUCCESS
+===================================================== */
+
+function closeSuccess(){
+
+    document
+        .getElementById(
+            "successOverlay"
+        )
+        .classList
+        .remove("show");
+
+}
+
+
+/* =====================================================
+   WHATSAPP ORDER
+===================================================== */
+
+function sendWhatsApp(){
+
+    if(!validateForm()){
+
+        return;
+
+    }
+
+
+    const name =
+        document
+        .getElementById("customerName")
+        .value;
+
+
+    const phone =
+        document
+        .getElementById("customerPhone")
+        .value;
+
+
+    const address =
+        document
+        .getElementById("customerAddress")
+        .value;
+
+
+    const type =
+        document
+        .getElementById("orderType")
+        .value;
+
+
+    const note =
+        document
+        .getElementById("instructions")
+        .value;
+
+
+    let subtotal = 0;
+
+
+    let message =
+        "🌿 *VEG FOOD JUNCTION ORDER*%0A%0A";
+
+
+    message +=
+        "👤 Name: "
+        + name
+        + "%0A";
+
+
+    message +=
+        "📱 Mobile: "
+        + phone
+        + "%0A";
+
+
+    message +=
+        "🛵 Order Type: "
+        + type
+        + "%0A";
+
+
+    message +=
+        "📍 Address: "
+        + address
+        + "%0A%0A";
+
+
+    message +=
+        "🍽️ *ORDER ITEMS*%0A";
+
+
+    cart.forEach(
+        function(item){
+
+            const itemTotal =
+                Number(item.price) *
+                Number(item.quantity);
+
+
+            subtotal += itemTotal;
+
+
+            message +=
+                "• "
+                + item.name
+                + " × "
+                + item.quantity
+                + " = ₹"
+                + itemTotal
+                + "%0A";
+
+        }
+    );
+
+
+    let delivery = 0;
+
+
+    if(
+        type === "Delivery"
+        &&
+        subtotal > 0
+    ){
+
+        delivery = 30;
+
+    }
+
+
+    const grandTotal =
+        subtotal +
+        delivery;
+
+
+    message +=
+        "%0A💰 Subtotal: ₹"
+        + subtotal;
+
+
+    message +=
+        "%0A🛵 Delivery: ₹"
+        + delivery;
+
+
+    message +=
+        "%0A💵 *GRAND TOTAL: ₹"
+        + grandTotal
+        + "*";
+
+
+    if(note.trim() !== ""){
+
+        message +=
+            "%0A%0A📝 Note: "
+            + note;
+
+    }
+
+
+    /*
+       Restaurant WhatsApp Number
+
+       7380756957
+    */
+
+    const restaurantNumber =
+        "917380756957";
+
+
+    const whatsappURL =
+        "https://wa.me/"
+        + restaurantNumber
+        + "?text="
+        + message;
+
+
+    window.open(
+        whatsappURL,
+        "_blank"
+    );
+
+}
+
+
+/* =====================================================
+   START
+===================================================== */
+
+displayCart();
+
+calculateTotal();
+
+</script>
+
+
+</body>
+
+</html>

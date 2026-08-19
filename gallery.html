@@ -1,0 +1,1912 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport"
+        content="width=device-width, initial-scale=1.0">
+
+    <title>Gallery | Veg Food Junction</title>
+
+    <link rel="preconnect"
+        href="https://fonts.googleapis.com">
+
+    <link rel="preconnect"
+        href="https://fonts.gstatic.com"
+        crossorigin>
+
+    <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display&family=Poppins:wght@300;400;500;600;700;800&display=swap"
+        rel="stylesheet">
+
+    <style>
+
+        /* =========================================
+           GLOBAL
+        ========================================= */
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: "Poppins", sans-serif;
+            background: #f7f4ed;
+            color: #20251f;
+        }
+
+        a {
+            text-decoration: none;
+        }
+
+        button {
+            font-family: inherit;
+        }
+
+
+        /* =========================================
+           NAVBAR
+        ========================================= */
+
+        .navbar {
+            height: 74px;
+
+            padding: 0 6%;
+
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+
+            background: rgba(255,255,255,0.96);
+
+            border-bottom: 1px solid #e9e5dc;
+
+            position: sticky;
+            top: 0;
+
+            z-index: 1000;
+
+            backdrop-filter: blur(10px);
+        }
+
+        .logo {
+            font-size: 22px;
+            font-weight: 800;
+            color: #23763a;
+        }
+
+        .logo span {
+            color: #222;
+        }
+
+        nav {
+            display: flex;
+            align-items: center;
+            gap: 25px;
+        }
+
+        nav a {
+            color: #333;
+            font-size: 13px;
+            font-weight: 500;
+            transition: 0.3s;
+        }
+
+        nav a:hover,
+        nav a.active {
+            color: #23763a;
+        }
+
+        .order-btn {
+            background: #23763a;
+            color: white !important;
+
+            padding: 10px 18px;
+
+            border-radius: 30px;
+        }
+
+
+        /* =========================================
+           HERO
+        ========================================= */
+
+        .hero {
+            min-height: 620px;
+
+            display: flex;
+            align-items: center;
+            justify-content: center;
+
+            text-align: center;
+
+            padding: 80px 20px;
+
+            position: relative;
+
+            overflow: hidden;
+
+            background:
+                linear-gradient(
+                    rgba(10,35,17,0.66),
+                    rgba(10,35,17,0.75)
+                ),
+                url("https://images.unsplash.com/photo-1547592180-85f173990554?auto=format&fit=crop&w=1800&q=85");
+
+            background-size: cover;
+            background-position: center;
+        }
+
+        .hero-content {
+            color: white;
+            max-width: 850px;
+
+            animation: heroIn 1s ease;
+        }
+
+        .hero-small {
+            font-size: 13px;
+
+            letter-spacing: 5px;
+
+            color: #c9e8b9;
+
+            margin-bottom: 18px;
+        }
+
+        .hero h1 {
+            font-family: "DM Serif Display", serif;
+
+            font-size: clamp(55px, 8vw, 105px);
+
+            line-height: 0.95;
+
+            font-weight: 400;
+
+            margin-bottom: 25px;
+        }
+
+        .hero h1 span {
+            color: #bde69c;
+        }
+
+        .hero p {
+            max-width: 600px;
+
+            margin: auto;
+
+            color: #e6eee4;
+
+            font-size: 15px;
+
+            line-height: 1.8;
+        }
+
+        .hero-buttons {
+            margin-top: 35px;
+
+            display: flex;
+
+            justify-content: center;
+
+            gap: 15px;
+
+            flex-wrap: wrap;
+        }
+
+        .hero-btn {
+            padding: 13px 25px;
+
+            border-radius: 30px;
+
+            font-size: 13px;
+
+            font-weight: 600;
+        }
+
+        .hero-btn.primary {
+            background: #b7df97;
+
+            color: #17341e;
+        }
+
+        .hero-btn.secondary {
+            color: white;
+
+            border: 1px solid rgba(255,255,255,0.6);
+        }
+
+
+        /* =========================================
+           FLOATING DECORATION
+        ========================================= */
+
+        .floating {
+            position: absolute;
+
+            font-size: 35px;
+
+            opacity: 0.7;
+
+            animation: float 4s ease-in-out infinite;
+        }
+
+        .float1 {
+            top: 18%;
+            left: 8%;
+        }
+
+        .float2 {
+            top: 30%;
+            right: 9%;
+
+            animation-delay: 1s;
+        }
+
+        .float3 {
+            bottom: 17%;
+            left: 14%;
+
+            animation-delay: 2s;
+        }
+
+        @keyframes float {
+
+            0%,100% {
+                transform: translateY(0);
+            }
+
+            50% {
+                transform: translateY(-18px);
+            }
+
+        }
+
+        @keyframes heroIn {
+
+            from {
+                opacity: 0;
+                transform: translateY(25px);
+            }
+
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+
+        }
+
+
+        /* =========================================
+           SECTION TITLE
+        ========================================= */
+
+        .section {
+            padding: 90px 6%;
+        }
+
+        .section-title {
+            text-align: center;
+
+            max-width: 700px;
+
+            margin: 0 auto 45px;
+        }
+
+        .eyebrow {
+            color: #3d8248;
+
+            font-size: 12px;
+
+            font-weight: 700;
+
+            letter-spacing: 3px;
+
+            text-transform: uppercase;
+        }
+
+        .section-title h2 {
+            font-family: "DM Serif Display", serif;
+
+            font-size: 48px;
+
+            font-weight: 400;
+
+            margin: 8px 0 12px;
+        }
+
+        .section-title p {
+            color: #777;
+
+            font-size: 14px;
+
+            line-height: 1.7;
+        }
+
+
+        /* =========================================
+           FILTER
+        ========================================= */
+
+        .filters {
+            display: flex;
+
+            justify-content: center;
+
+            flex-wrap: wrap;
+
+            gap: 9px;
+
+            margin-bottom: 45px;
+        }
+
+        .filter {
+            border: 1px solid #d7dfd3;
+
+            background: white;
+
+            color: #37623e;
+
+            padding: 10px 20px;
+
+            border-radius: 30px;
+
+            cursor: pointer;
+
+            font-size: 12px;
+
+            font-weight: 600;
+
+            transition: 0.3s;
+        }
+
+        .filter:hover,
+        .filter.active {
+            background: #23763a;
+
+            border-color: #23763a;
+
+            color: white;
+
+            transform: translateY(-2px);
+        }
+
+
+        /* =========================================
+           MASONRY GALLERY
+        ========================================= */
+
+        .gallery {
+            max-width: 1250px;
+
+            margin: auto;
+
+            columns: 3 300px;
+
+            column-gap: 18px;
+        }
+
+        .gallery-card {
+            position: relative;
+
+            display: inline-block;
+
+            width: 100%;
+
+            margin: 0 0 18px;
+
+            overflow: hidden;
+
+            border-radius: 18px;
+
+            background: white;
+
+            cursor: pointer;
+
+            break-inside: avoid;
+
+            box-shadow:
+                0 8px 30px rgba(25,50,25,0.08);
+
+            transition: 0.4s;
+        }
+
+        .gallery-card:hover {
+            transform: translateY(-5px);
+
+            box-shadow:
+                0 18px 40px rgba(25,50,25,0.15);
+        }
+
+        .gallery-card img {
+            width: 100%;
+
+            display: block;
+
+            transition: 0.6s;
+        }
+
+        .gallery-card:hover img {
+            transform: scale(1.06);
+        }
+
+        .gallery-info {
+            position: absolute;
+
+            left: 0;
+            right: 0;
+            bottom: 0;
+
+            padding: 55px 20px 20px;
+
+            color: white;
+
+            background:
+                linear-gradient(
+                    transparent,
+                    rgba(0,0,0,0.85)
+                );
+
+            opacity: 0;
+
+            transform: translateY(10px);
+
+            transition: 0.35s;
+        }
+
+        .gallery-card:hover .gallery-info {
+            opacity: 1;
+
+            transform: translateY(0);
+        }
+
+        .gallery-info h3 {
+            font-size: 19px;
+
+            margin-bottom: 3px;
+        }
+
+        .gallery-info p {
+            font-size: 11px;
+
+            opacity: 0.85;
+        }
+
+        .price {
+            color: #d2efa9;
+
+            font-weight: 700;
+
+            margin-top: 5px;
+
+            display: block;
+        }
+
+        .heart {
+            position: absolute;
+
+            top: 15px;
+            right: 15px;
+
+            width: 38px;
+            height: 38px;
+
+            border-radius: 50%;
+
+            border: none;
+
+            background: rgba(255,255,255,0.9);
+
+            cursor: pointer;
+
+            font-size: 18px;
+
+            z-index: 5;
+
+            transition: 0.3s;
+        }
+
+        .heart:hover {
+            transform: scale(1.12);
+        }
+
+        .heart.liked {
+            background: #23763a;
+
+            color: white;
+        }
+
+
+        /* =========================================
+           CHEF SPECIAL
+        ========================================= */
+
+        .chef-special {
+            max-width: 1200px;
+
+            margin: 20px auto 0;
+
+            display: grid;
+
+            grid-template-columns: 1fr 1fr;
+
+            min-height: 430px;
+
+            background: #17351f;
+
+            border-radius: 25px;
+
+            overflow: hidden;
+
+            box-shadow:
+                0 20px 60px rgba(20,50,25,0.18);
+        }
+
+        .chef-image {
+            background:
+                url("https://images.unsplash.com/photo-1601050690597-df0568f70950?auto=format&fit=crop&w=1000&q=85");
+
+            background-size: cover;
+
+            background-position: center;
+        }
+
+        .chef-content {
+            color: white;
+
+            padding: 60px;
+
+            display: flex;
+
+            flex-direction: column;
+
+            justify-content: center;
+        }
+
+        .chef-content small {
+            color: #b9e493;
+
+            letter-spacing: 3px;
+
+            font-weight: 700;
+        }
+
+        .chef-content h2 {
+            font-family: "DM Serif Display", serif;
+
+            font-size: 48px;
+
+            font-weight: 400;
+
+            margin: 10px 0 15px;
+        }
+
+        .chef-content p {
+            color: #c8d5ca;
+
+            font-size: 14px;
+
+            line-height: 1.8;
+
+            margin-bottom: 25px;
+        }
+
+        .chef-price {
+            font-size: 20px;
+
+            color: #c8e9aa;
+
+            font-weight: 700;
+
+            margin-bottom: 25px;
+        }
+
+        .chef-btn {
+            display: inline-block;
+
+            width: fit-content;
+
+            background: #b9e393;
+
+            color: #17351f;
+
+            padding: 12px 24px;
+
+            border-radius: 30px;
+
+            font-size: 13px;
+
+            font-weight: 700;
+        }
+
+
+        /* =========================================
+           STATS
+        ========================================= */
+
+        .stats {
+            display: grid;
+
+            grid-template-columns:
+                repeat(4, 1fr);
+
+            gap: 20px;
+
+            max-width: 1000px;
+
+            margin: 70px auto 0;
+        }
+
+        .stat {
+            text-align: center;
+
+            padding: 25px;
+
+            background: white;
+
+            border-radius: 15px;
+
+            border: 1px solid #e6e6df;
+        }
+
+        .stat strong {
+            display: block;
+
+            font-size: 30px;
+
+            color: #23763a;
+        }
+
+        .stat span {
+            color: #777;
+
+            font-size: 12px;
+        }
+
+
+        /* =========================================
+           LIGHTBOX
+        ========================================= */
+
+        .lightbox {
+            position: fixed;
+
+            inset: 0;
+
+            background: rgba(8,15,9,0.94);
+
+            display: none;
+
+            align-items: center;
+
+            justify-content: center;
+
+            z-index: 5000;
+
+            padding: 30px;
+        }
+
+        .lightbox.show {
+            display: flex;
+        }
+
+        .lightbox img {
+            max-width: 88vw;
+
+            max-height: 82vh;
+
+            border-radius: 15px;
+
+            box-shadow:
+                0 20px 80px rgba(0,0,0,0.6);
+        }
+
+        .close {
+            position: absolute;
+
+            top: 25px;
+            right: 35px;
+
+            color: white;
+
+            font-size: 40px;
+
+            cursor: pointer;
+        }
+
+        .lightbox-caption {
+            position: absolute;
+
+            bottom: 25px;
+
+            color: white;
+
+            text-align: center;
+        }
+
+        .lightbox-caption h3 {
+            font-size: 20px;
+        }
+
+        .lightbox-caption p {
+            color: #ccc;
+
+            font-size: 12px;
+        }
+
+
+        /* =========================================
+           CTA
+        ========================================= */
+
+        .cta {
+            text-align: center;
+
+            padding: 100px 20px;
+
+            background:
+                linear-gradient(
+                    rgba(21,67,31,0.92),
+                    rgba(21,67,31,0.92)
+                ),
+                url("https://images.unsplash.com/photo-1515003197210-e0cd71810b5f?auto=format&fit=crop&w=1600&q=80");
+
+            background-size: cover;
+
+            color: white;
+        }
+
+        .cta small {
+            letter-spacing: 3px;
+
+            color: #bce49d;
+        }
+
+        .cta h2 {
+            font-family: "DM Serif Display", serif;
+
+            font-size: 50px;
+
+            font-weight: 400;
+
+            margin: 10px 0 25px;
+        }
+
+        .cta a {
+            display: inline-block;
+
+            background: #c2e9a4;
+
+            color: #17351f;
+
+            padding: 13px 27px;
+
+            border-radius: 30px;
+
+            font-size: 13px;
+
+            font-weight: 700;
+        }
+
+
+        /* =========================================
+           FOOTER
+        ========================================= */
+
+        footer {
+            background: #102217;
+
+            color: white;
+
+            text-align: center;
+
+            padding: 45px 20px;
+        }
+
+        footer h2 {
+            margin-bottom: 8px;
+        }
+
+        footer p {
+            color: #aebbb1;
+
+            font-size: 12px;
+
+            margin: 8px;
+        }
+
+        .footer-links {
+            display: flex;
+
+            justify-content: center;
+
+            gap: 22px;
+
+            flex-wrap: wrap;
+
+            margin: 20px 0;
+        }
+
+        .footer-links a {
+            color: white;
+
+            font-size: 12px;
+        }
+
+        .footer-links a:hover {
+            color: #b9e493;
+        }
+
+
+        /* =========================================
+           MOBILE
+        ========================================= */
+
+        @media(max-width:800px) {
+
+            nav {
+                gap: 10px;
+            }
+
+            nav a {
+                font-size: 10px;
+            }
+
+            .chef-special {
+                grid-template-columns: 1fr;
+            }
+
+            .chef-image {
+                min-height: 300px;
+            }
+
+            .stats {
+                grid-template-columns:
+                    repeat(2,1fr);
+            }
+
+        }
+
+
+        @media(max-width:600px) {
+
+            .navbar {
+                height: auto;
+
+                padding: 18px;
+
+                flex-direction: column;
+
+                gap: 15px;
+            }
+
+            nav {
+                flex-wrap: wrap;
+
+                justify-content: center;
+            }
+
+            .hero {
+                min-height: 550px;
+            }
+
+            .hero h1 {
+                font-size: 60px;
+            }
+
+            .section {
+                padding: 65px 5%;
+            }
+
+            .section-title h2 {
+                font-size: 38px;
+            }
+
+            .chef-content {
+                padding: 35px 25px;
+            }
+
+            .chef-content h2 {
+                font-size: 38px;
+            }
+
+            .stats {
+                grid-template-columns: 1fr;
+            }
+
+            .cta h2 {
+                font-size: 38px;
+            }
+
+        }
+
+    </style>
+
+</head>
+
+
+<body>
+
+
+<!-- =========================================
+     NAVBAR
+========================================= -->
+
+<header class="navbar">
+
+    <div class="logo">
+        🌿 Veg <span>Food Junction</span>
+    </div>
+
+    <nav>
+
+        <a href="index.html">
+            Home
+        </a>
+
+        <a href="menu.html">
+            Menu
+        </a>
+
+        <a href="about.html">
+            About
+        </a>
+
+        <a href="gallery.html"
+           class="active">
+            Gallery
+        </a>
+
+        <a href="contact.html">
+            Contact
+        </a>
+
+        <a href="order.html"
+           class="order-btn">
+            🛒 Order
+        </a>
+
+    </nav>
+
+</header>
+
+
+
+<!-- =========================================
+     HERO
+========================================= -->
+
+<section class="hero">
+
+    <div class="floating float1">
+        🍃
+    </div>
+
+    <div class="floating float2">
+        🍕
+    </div>
+
+    <div class="floating float3">
+        🥗
+    </div>
+
+
+    <div class="hero-content">
+
+        <div class="hero-small">
+            VEG FOOD JUNCTION
+        </div>
+
+        <h1>
+            Taste in<br>
+            <span>Every Frame.</span>
+        </h1>
+
+        <p>
+            Har dish ki apni ek kahani hai.
+            Explore our food, flavours and
+            moments through our gallery.
+        </p>
+
+
+        <div class="hero-buttons">
+
+            <a href="#collection"
+               class="hero-btn primary">
+                Explore Collection ↓
+            </a>
+
+            <a href="menu.html"
+               class="hero-btn secondary">
+                View Menu →
+            </a>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+
+<!-- =========================================
+     COLLECTION
+========================================= -->
+
+<section class="section"
+         id="collection">
+
+
+    <div class="section-title">
+
+        <div class="eyebrow">
+            Our Collection
+        </div>
+
+        <h2>
+            Made to be Seen.
+        </h2>
+
+        <p>
+            Fresh ingredients, beautiful presentation
+            aur vegetarian flavours — sab ek jagah.
+        </p>
+
+    </div>
+
+
+
+    <!-- FILTER -->
+
+    <div class="filters">
+
+        <button
+            class="filter active"
+            onclick="filterGallery('all',this)">
+            All
+        </button>
+
+        <button
+            class="filter"
+            onclick="filterGallery('starter',this)">
+            🥗 Starters
+        </button>
+
+        <button
+            class="filter"
+            onclick="filterGallery('main',this)">
+            🍛 Main Course
+        </button>
+
+        <button
+            class="filter"
+            onclick="filterGallery('pizza',this)">
+            🍕 Pizza
+        </button>
+
+        <button
+            class="filter"
+            onclick="filterGallery('bakery',this)">
+            🥐 Bakery
+        </button>
+
+        <button
+            class="filter"
+            onclick="filterGallery('drink',this)">
+            🥤 Drinks
+        </button>
+
+        <button
+            class="filter"
+            onclick="filterGallery('sweet',this)">
+            🍰 Desserts
+        </button>
+
+    </div>
+
+
+
+    <!-- =====================================
+         GALLERY GRID
+    ====================================== -->
+
+    <div class="gallery">
+
+
+        <!-- CARD 1 -->
+
+        <div class="gallery-card main"
+             onclick="openLightbox(this)">
+
+            <button
+                class="heart"
+                onclick="toggleLike(event,this)">
+                ♡
+            </button>
+
+            <img
+                src="https://images.unsplash.com/photo-1585937421612-70a008356fbe?auto=format&fit=crop&w=900&q=85"
+                alt="Paneer Curry">
+
+            <div class="gallery-info">
+
+                <h3>
+                    Shahi Paneer
+                </h3>
+
+                <p>
+                    Rich creamy Indian flavour
+                </p>
+
+                <span class="price">
+                    ₹220
+                </span>
+
+            </div>
+
+        </div>
+
+
+
+        <!-- CARD 2 -->
+
+        <div class="gallery-card pizza"
+             onclick="openLightbox(this)">
+
+            <button
+                class="heart"
+                onclick="toggleLike(event,this)">
+                ♡
+            </button>
+
+            <img
+                src="https://images.unsplash.com/photo-1513104890138-7c749659a591?auto=format&fit=crop&w=900&q=85"
+                alt="Veg Pizza">
+
+            <div class="gallery-info">
+
+                <h3>
+                    Farmhouse Pizza
+                </h3>
+
+                <p>
+                    Fresh vegetables & cheese
+                </p>
+
+                <span class="price">
+                    ₹249
+                </span>
+
+            </div>
+
+        </div>
+
+
+
+        <!-- CARD 3 -->
+
+        <div class="gallery-card drink"
+             onclick="openLightbox(this)">
+
+            <button
+                class="heart"
+                onclick="toggleLike(event,this)">
+                ♡
+            </button>
+
+            <img
+                src="https://images.unsplash.com/photo-1517701604599-bb29b565090c?auto=format&fit=crop&w=900&q=85"
+                alt="Coffee">
+
+            <div class="gallery-info">
+
+                <h3>
+                    Cappuccino
+                </h3>
+
+                <p>
+                    Freshly brewed coffee
+                </p>
+
+                <span class="price">
+                    ₹90
+                </span>
+
+            </div>
+
+        </div>
+
+
+
+        <!-- CARD 4 -->
+
+        <div class="gallery-card starter"
+             onclick="openLightbox(this)">
+
+            <button
+                class="heart"
+                onclick="toggleLike(event,this)">
+                ♡
+            </button>
+
+            <img
+                src="https://images.unsplash.com/photo-1541592106381-b31e9677c0e5?auto=format&fit=crop&w=900&q=85"
+                alt="French Fries">
+
+            <div class="gallery-info">
+
+                <h3>
+                    French Fries
+                </h3>
+
+                <p>
+                    Crispy golden fries
+                </p>
+
+                <span class="price">
+                    ₹90
+                </span>
+
+            </div>
+
+        </div>
+
+
+
+        <!-- CARD 5 -->
+
+        <div class="gallery-card main"
+             onclick="openLightbox(this)">
+
+            <button
+                class="heart"
+                onclick="toggleLike(event,this)">
+                ♡
+            </button>
+
+            <img
+                src="https://images.unsplash.com/photo-1565557623262-b51c2513a641?auto=format&fit=crop&w=900&q=85"
+                alt="Indian Thali">
+
+            <div class="gallery-info">
+
+                <h3>
+                    Special Veg Thali
+                </h3>
+
+                <p>
+                    Complete vegetarian meal
+                </p>
+
+                <span class="price">
+                    ₹280
+                </span>
+
+            </div>
+
+        </div>
+
+
+
+        <!-- CARD 6 -->
+
+        <div class="gallery-card sweet"
+             onclick="openLightbox(this)">
+
+            <button
+                class="heart"
+                onclick="toggleLike(event,this)">
+                ♡
+            </button>
+
+            <img
+                src="https://images.unsplash.com/photo-1578985545062-69928b1d9587?auto=format&fit=crop&w=900&q=85"
+                alt="Chocolate Cake">
+
+            <div class="gallery-info">
+
+                <h3>
+                    Chocolate Pastry
+                </h3>
+
+                <p>
+                    Soft & creamy dessert
+                </p>
+
+                <span class="price">
+                    ₹70
+                </span>
+
+            </div>
+
+        </div>
+
+
+
+        <!-- CARD 7 -->
+
+        <div class="gallery-card bakery"
+             onclick="openLightbox(this)">
+
+            <button
+                class="heart"
+                onclick="toggleLike(event,this)">
+                ♡
+            </button>
+
+            <img
+                src="https://images.unsplash.com/photo-1509440159596-0249088772ff?auto=format&fit=crop&w=900&q=85"
+                alt="Bakery">
+
+            <div class="gallery-info">
+
+                <h3>
+                    Fresh Bakery
+                </h3>
+
+                <p>
+                    Freshly baked every day
+                </p>
+
+                <span class="price">
+                    From ₹35
+                </span>
+
+            </div>
+
+        </div>
+
+
+
+        <!-- CARD 8 -->
+
+        <div class="gallery-card starter"
+             onclick="openLightbox(this)">
+
+            <button
+                class="heart"
+                onclick="toggleLike(event,this)">
+                ♡
+            </button>
+
+            <img
+                src="https://images.unsplash.com/photo-1628294895950-9805252327bc?auto=format&fit=crop&w=900&q=85"
+                alt="Paneer Tikka">
+
+            <div class="gallery-info">
+
+                <h3>
+                    Paneer Tikka
+                </h3>
+
+                <p>
+                    Smoky & spicy starter
+                </p>
+
+                <span class="price">
+                    ₹180
+                </span>
+
+            </div>
+
+        </div>
+
+
+
+        <!-- CARD 9 -->
+
+        <div class="gallery-card drink"
+             onclick="openLightbox(this)">
+
+            <button
+                class="heart"
+                onclick="toggleLike(event,this)">
+                ♡
+            </button>
+
+            <img
+                src="https://images.unsplash.com/photo-1570696516188-ade861b84a49?auto=format&fit=crop&w=900&q=85"
+                alt="Milkshake">
+
+            <div class="gallery-info">
+
+                <h3>
+                    Mango Shake
+                </h3>
+
+                <p>
+                    Fresh & creamy
+                </p>
+
+                <span class="price">
+                    ₹100
+                </span>
+
+            </div>
+
+        </div>
+
+
+
+        <!-- CARD 10 -->
+
+        <div class="gallery-card main"
+             onclick="openLightbox(this)">
+
+            <button
+                class="heart"
+                onclick="toggleLike(event,this)">
+                ♡
+            </button>
+
+            <img
+                src="https://images.unsplash.com/photo-1601050690597-df0568f70950?auto=format&fit=crop&w=900&q=85"
+                alt="Samosa">
+
+            <div class="gallery-info">
+
+                <h3>
+                    Special Samosa
+                </h3>
+
+                <p>
+                    Crispy Indian favourite
+                </p>
+
+                <span class="price">
+                    ₹40
+                </span>
+
+            </div>
+
+        </div>
+
+
+
+        <!-- CARD 11 -->
+
+        <div class="gallery-card sweet"
+             onclick="openLightbox(this)">
+
+            <button
+                class="heart"
+                onclick="toggleLike(event,this)">
+                ♡
+            </button>
+
+            <img
+                src="https://images.unsplash.com/photo-1488477181946-6428a0291777?auto=format&fit=crop&w=900&q=85"
+                alt="Dessert">
+
+            <div class="gallery-info">
+
+                <h3>
+                    Sweet Dessert
+                </h3>
+
+                <p>
+                    Perfect ending to your meal
+                </p>
+
+                <span class="price">
+                    ₹80
+                </span>
+
+            </div>
+
+        </div>
+
+
+
+        <!-- CARD 12 -->
+
+        <div class="gallery-card bakery"
+             onclick="openLightbox(this)">
+
+            <button
+                class="heart"
+                onclick="toggleLike(event,this)">
+                ♡
+            </button>
+
+            <img
+                src="https://images.unsplash.com/photo-1555507036-ab1f4038808a?auto=format&fit=crop&w=900&q=85"
+                alt="Pastry">
+
+            <div class="gallery-info">
+
+                <h3>
+                    Fresh Pastry
+                </h3>
+
+                <p>
+                    Soft, fresh & delicious
+                </p>
+
+                <span class="price">
+                    ₹70
+                </span>
+
+            </div>
+
+        </div>
+
+
+    </div>
+
+
+    <!-- =====================================
+         STATS
+    ====================================== -->
+
+    <div class="stats">
+
+        <div class="stat">
+
+            <strong>50+</strong>
+
+            <span>
+                Delicious Dishes
+            </span>
+
+        </div>
+
+
+        <div class="stat">
+
+            <strong>100%</strong>
+
+            <span>
+                Vegetarian
+            </span>
+
+        </div>
+
+
+        <div class="stat">
+
+            <strong>4.9★</strong>
+
+            <span>
+                Customer Rating
+            </span>
+
+        </div>
+
+
+        <div class="stat">
+
+            <strong>Fresh</strong>
+
+            <span>
+                Every Single Day
+            </span>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+
+<!-- =========================================
+     CHEF SPECIAL
+========================================= -->
+
+<section class="section">
+
+    <div class="section-title">
+
+        <div class="eyebrow">
+            Chef's Choice
+        </div>
+
+        <h2>
+            Today's Special
+        </h2>
+
+    </div>
+
+
+    <div class="chef-special">
+
+        <div class="chef-image"></div>
+
+
+        <div class="chef-content">
+
+            <small>
+                ⭐ CHEF RECOMMENDS
+            </small>
+
+            <h2>
+                Special Veg Thali
+            </h2>
+
+            <p>
+                Fresh seasonal vegetables, dal,
+                paneer curry, rice, roti, salad,
+                chutney aur sweet — ek complete
+                vegetarian experience.
+            </p>
+
+            <div class="chef-price">
+                ₹280
+            </div>
+
+            <a href="order.html"
+               class="chef-btn">
+                Order This Dish →
+            </a>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+
+<!-- =========================================
+     CTA
+========================================= -->
+
+<section class="cta">
+
+    <small>
+        READY TO TASTE?
+    </small>
+
+    <h2>
+        Photos Dekh Li...<br>
+        Ab Taste Bhi Karo! 😋
+    </h2>
+
+    <a href="menu.html">
+        Explore Our Menu →
+    </a>
+
+</section>
+
+
+
+<!-- =========================================
+     FOOTER
+========================================= -->
+
+<footer>
+
+    <h2>
+        🌿 Veg Food Junction
+    </h2>
+
+    <p>
+        Fresh • Healthy • Delicious • 100% Vegetarian
+    </p>
+
+
+    <div class="footer-links">
+
+        <a href="index.html">Home</a>
+
+        <a href="menu.html">Menu</a>
+
+        <a href="about.html">About</a>
+
+        <a href="gallery.html">Gallery</a>
+
+        <a href="contact.html">Contact</a>
+
+    </div>
+
+
+    <p>
+        © 2026 Veg Food Junction. All Rights Reserved.
+    </p>
+
+</footer>
+
+
+
+<!-- =========================================
+     LIGHTBOX
+========================================= -->
+
+<div class="lightbox"
+     id="lightbox"
+     onclick="closeLightbox(event)">
+
+    <span class="close"
+          onclick="closeLightbox(event)">
+        ×
+    </span>
+
+    <img id="lightboxImage"
+         src=""
+         alt="Food">
+
+    <div class="lightbox-caption">
+
+        <h3 id="lightboxTitle">
+            Food
+        </h3>
+
+        <p id="lightboxDescription">
+            Veg Food Junction
+        </p>
+
+    </div>
+
+</div>
+
+
+
+<script>
+
+    /* =========================================
+       FILTER
+    ========================================= */
+
+    function filterGallery(category, button) {
+
+        const cards =
+            document.querySelectorAll(".gallery-card");
+
+        const buttons =
+            document.querySelectorAll(".filter");
+
+
+        buttons.forEach(function(btn) {
+
+            btn.classList.remove("active");
+
+        });
+
+
+        button.classList.add("active");
+
+
+        cards.forEach(function(card) {
+
+            if (category === "all") {
+
+                card.style.display = "inline-block";
+
+            }
+
+            else if (
+                card.classList.contains(category)
+            ) {
+
+                card.style.display = "inline-block";
+
+            }
+
+            else {
+
+                card.style.display = "none";
+
+            }
+
+        });
+
+    }
+
+
+
+    /* =========================================
+       LIGHTBOX
+    ========================================= */
+
+    function openLightbox(card) {
+
+        const image =
+            card.querySelector("img");
+
+        const title =
+            card.querySelector("h3");
+
+        const description =
+            card.querySelector("p");
+
+
+        document.getElementById(
+            "lightboxImage"
+        ).src = image.src;
+
+
+        document.getElementById(
+            "lightboxTitle"
+        ).innerText = title.innerText;
+
+
+        document.getElementById(
+            "lightboxDescription"
+        ).innerText = description.innerText;
+
+
+        document.getElementById(
+            "lightbox"
+        ).classList.add("show");
+
+    }
+
+
+
+    function closeLightbox(event) {
+
+        if (
+            event.target.id === "lightbox" ||
+            event.target.classList.contains("close")
+        ) {
+
+            document
+                .getElementById("lightbox")
+                .classList.remove("show");
+
+        }
+
+    }
+
+
+
+    /* =========================================
+       FAVOURITE
+    ========================================= */
+
+    function toggleLike(event, button) {
+
+        event.stopPropagation();
+
+        button.classList.toggle("liked");
+
+
+        if (button.classList.contains("liked")) {
+
+            button.innerText = "♥";
+
+        }
+
+        else {
+
+            button.innerText = "♡";
+
+        }
+
+    }
+
+
+
+    /* =========================================
+       ESC KEY
+    ========================================= */
+
+    document.addEventListener(
+        "keydown",
+        function(event) {
+
+            if (event.key === "Escape") {
+
+                document
+                    .getElementById("lightbox")
+                    .classList.remove("show");
+
+            }
+
+        }
+    );
+
+</script>
+
+
+</body>
+
+</html>
